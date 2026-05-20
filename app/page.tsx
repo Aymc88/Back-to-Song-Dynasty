@@ -52,6 +52,20 @@ export default function Home() {
         />
       </section>
 
+      <section className="max-w-5xl mx-auto px-6 py-8">
+        <div className="rounded-sm overflow-hidden border-2 border-ink/10 shadow-md">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img 
+            src="/rainbow-bridge.jpg" 
+            alt="Rainbow Bridge from Along the River During the Qingming Festival"
+            className="w-full h-auto object-cover hover:scale-[1.02] transition-transform duration-700"
+          />
+        </div>
+        <p className="text-center text-sm text-muted mt-3 italic">
+          The famous Rainbow Bridge from Zhang Zeduan's Along the River During the Qingming Festival (清明上河图)
+        </p>
+      </section>
+
       <div className="ink-divider" aria-hidden>❦</div>
 
       <section className="max-w-3xl mx-auto px-6 py-12">
