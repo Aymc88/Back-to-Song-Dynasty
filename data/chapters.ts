@@ -23,7 +23,7 @@ export const chapters: Chapter[] = [
       "The exhibit was called \"A City on Silk.\" My history teacher had assigned a paper on a single piece of art from anywhere before 1500 CE, and I had picked Along the River During the Qingming Festival — Zhang Zeduan's twenty-five-foot scroll of Bianjing, capital of the Northern Song. Most museums only show a digital copy. The MFA had a fragment of the real silk on loan from Beijing for one week, and I had skipped lunch to see it.",
       "The boats on the Bian River looked alive. Camels swayed past noodle shops. A scholar bent over a fortune-teller's table. A child reached for a sugar-coated plum on a stick. Nine hundred years ago, a man named Zhang Zeduan had stood in the same city and remembered everything he saw. Now his memory was glass-cased in front of me.",
       "When I leaned closer to read the museum label, my reflection in the case wavered, doubled, and slid sideways like ink in water. The voices around me — a docent, a tour group, a child asking when they could leave — folded into the sound of a river. The smell of climate-controlled air became wood smoke, frying oil, sweat, and something sweet I would later learn was steamed osmanthus.",
-      "The last thing I remember from 2026 was my backpack swinging against my hip. Inside it: a sealed vial my mother (a microbiologist at Mass General) had asked me to drop off at the lab on my way home, a printed senior project on the history of gunpowder, and a rugged solar tablet my father had bought me for a summer hiking trip, loaded with every book and map I would need offline.",
+      "The last thing I remember from 2026 was my backpack swinging against my hip. Inside it: a sealed vial my mother (a microbiologist at Mass General) had asked me to drop off at the lab on my way home, a printed senior project on the history of gunpowder, and a cloth sack of seed potatoes I was bringing to my biology class, where we were studying how a single tuber can clone itself into a whole field.",
       "Three things from 2026. I would not understand how dangerous they were until I had landed on the other side of the scroll.",
     ],
     pullQuote: "Nine hundred years ago, a man stood in the same city and remembered everything he saw.",
@@ -53,7 +53,7 @@ export const chapters: Chapter[] = [
       "I unpacked my backpack on the wooden floor of a room I had rented for three copper coins (the inn-keeper accepted my Apple Watch as collateral; I do not think he understood what it was, but he liked that it ticked). I laid out three objects.",
       "The first was the sealed vial — a thumb-sized cylinder of frosted glass containing a freeze-dried culture of Penicillium chrysogenum. My mother's lab had been preparing it for a teaching workshop. On its label, in her handwriting: \"Live. Keep cold. Reactivate in nutrient broth.\" Penicillin would not be discovered in the world I had just left until 1928 CE. In 1120 CE, infection killed more soldiers than swords did. Childbirth killed mothers by the millions. A scratch from a rusted nail could end an emperor.",
       "The second was my senior history project — a waterproof, printed manual on the history of gunpowder. Beside the text I had typed out, in plain Chinese and English, the modern formula (75% potassium nitrate, 15% charcoal, 10% sulfur, by weight) and design sketches I had copied for the report: a matchlock musket, a bronze field cannon, a star-shaped fortification, and the basic principles of rifling. Song-dynasty alchemists already knew gunpowder, but their formula was weak and they used it mostly for fireworks and signal rockets. The Jurchen cavalry that would destroy Bianjing in seven years would not survive a single charge against a line of matchlocks.",
-      "The third was the tablet — a ruggedized, solar-charged slate the size of a thin book. I had it loaded for a summer of hiking in places with no signal: offline Wikipedia in Chinese and English, every public-domain agricultural science textbook the U.S. Department of Agriculture publishes, satellite maps of the entire Eurasian landmass, a translation app, and — accidentally — the next nine hundred years of human history. A single piece of glass that held all the knowledge the Northern Song had not yet earned.",
+      "The third was the sack of seed potatoes — ordinary, dirt-brown, beginning to sprout. They had been bound for my biology class, where we were studying vegetative propagation: how a potato, unlike a grain of wheat, is not a seed but a tuber, and how a single one cut into pieces becomes an entire harvest. In 1120 CE, the potato did not exist anywhere in Asia, Europe, or Africa. It was still a wild plant in the Andes of South America, on a continent no one in Bianjing knew was there. I was holding a crop from a hemisphere that, to the Northern Song, had not yet been imagined.",
       "I sat on the floor staring at the three things, and I understood, for the first time, what kind of weapon a tourist could become.",
     ],
     pullQuote: "I understood, for the first time, what kind of weapon a tourist could become.",
@@ -89,20 +89,19 @@ export const chapters: Chapter[] = [
     pullQuote: "You have changed the shape of every war for the next thousand years.",
   },
   {
-    slug: "the-mirror",
+    slug: "the-potato",
     number: 6,
-    title: "The Mirror — A Glass That Remembers Everything",
-    subtitle: "The Tablet, the Maps, and the Future as a Warning",
-    era: "The Imperial Library, Bianjing · 1123 — 1130",
+    title: "The Tuber — Food That Multiplies in the Dark",
+    subtitle: "Seed Potatoes and the End of Famine",
+    era: "The terraced hills outside Bianjing · 1121 — 1130",
     paragraphs: [
-      "The first time Emperor Huizong saw the tablet light up, he asked if it was the soul of a star. I told him it was a window — a small, dark window onto everything human beings had ever written down. I showed him an offline page of Wikipedia: a satellite photograph of the Yellow River, a chart of crop yields, a portrait of his own face copied from a museum in Taipei in the year 2024.",
-      "He asked, very quietly, what year the museum was in. I told him. He did not blink.",
-      "Of the three artifacts, the tablet was the most dangerous. The vial could heal a single body at a time. The manual could equip a single army. The tablet held the entire shape of the future — every famine, every dynasty, every war, every invention from the printing press to the integrated circuit. To hand it to a man already inclined to mysticism (Huizong was a devout Daoist who built temples on the public purse) was to risk turning him into a tyrant who believed he could not lose.",
-      "So I made a rule with myself: the tablet would be a library, not an oracle. I would not show him personal futures. I would not predict who would betray him. I would only share what could feed his people, defend his cities, and improve their tools. Modern crop rotation. Composting. Selective seed breeding. The germ theory of disease. Basic chemistry. Cartography. The thousand small things that, applied steadily for a generation, change a civilization.",
-      "By 1130, the Imperial Library at Bianjing had three new buildings: one for medicine, one for agriculture, one for cartography. A school of \"Western Studies\" (西学) had been founded that, in my timeline, would not exist until the late Ming. The Northern Song was harvesting two crops a year in fields that had previously yielded one. The population was approaching one hundred and forty million people, on its way to two hundred million by the end of the century. There were observatories. There were public hospitals. There was a draft of a constitution.",
-      "And there was me, sitting in the Imperial Library at sixteen years old, watching the world I had read about in a textbook stop existing.",
+      "The third object in my backpack was the strangest to explain, because it did not look like a marvel. It was a cloth sack of seed potatoes — ordinary, dirt-brown, slightly sprouting. I had been carrying them to my biology class, where we were studying how a potato is not really a seed at all: you cut one tuber into pieces, leave an \"eye\" on each piece, bury them, and every piece grows into a whole new plant. A crop that copies itself.",
+      "I planted the first row on a thin, stony hillside outside the city that a farmer named Widow Cao had given up on years ago — land too poor for rice, too dry for good wheat. I showed her how to cut the tubers, how to hill the soil up around the stems. She thought I was burying good food in bad ground. Four months later we dug up the row, and she sat down in the dirt and did not speak, because one sack of seed had become eleven sacks of potatoes.",
+      "That is the quiet miracle of the potato. It grows where the great grains cannot — cold uplands, terraced slopes, thin and stony soil, the marginal land that every Song prefecture had in abundance and no use for. Acre for acre it yields two to four times the calories of wheat or millet. It stores through winter in a cool cellar. It asks for poor land and pays back full bellies.",
+      "Famine was the oldest enemy of every Chinese dynasty — older than the Jurchens, older than the Mongols. A single failed harvest emptied granaries, emptied villages, and filled the roads with desperate rebels. By 1130, potato fields climbed the hills of a dozen prefectures, and the court had noticed something simple and enormous: a fed peasant pays taxes, raises children who live, and, when the empire calls, marches. This was the lesson I had not understood when I packed my backpack. An emperor does not make a dynasty strong. A growing, fed, healthy population does. Food comes first; everything else is built on top of it.",
+      "I stood on Widow Cao's hillside in the autumn of 1130 and looked at rows of a plant that, in the world I came from, would not reach China for another five hundred years. It was not a glamorous gift. It was only the difference between a country that shrinks in a hard winter and a country that does not. That difference, repeated across a hundred million people, is what history is actually made of.",
     ],
-    pullQuote: "The tablet would be a library, not an oracle.",
+    pullQuote: "An emperor does not make a dynasty strong. A growing, fed, healthy population does.",
   },
   {
     slug: "the-new-timeline",
@@ -112,12 +111,12 @@ export const chapters: Chapter[] = [
     era: "From 1127 onward · The history that should not have been",
     paragraphs: [
       "In the timeline I came from, 1127 is one of the most famous dates in Chinese history. The Jurchen Jin sack Bianjing. They capture Emperor Huizong, his son Qinzong, the entire imperial harem, and tens of thousands of officials and craftsmen. The Northern Song ends. A remnant court flees south and founds the Southern Song in Hangzhou, where it will survive — beautiful, cultured, militarily weak — until the Mongols destroy it in 1279.",
-      "In the timeline I made, 1127 is the year the Jurchen Jin shattered against the walls of Bianjing and retreated into the steppe to lick wounds they could not heal. Emperor Huizong did not die in captivity. He abdicated in 1130 to his son Qinzong, who, advised by a council that now included a young scholar from a place called Boston, focused the empire's energy not on poetry and palace gardens but on roads, schools, mold-houses, arsenals, and a navy.",
+      "In the timeline I made, 1127 is the year the Jurchen Jin shattered against the walls of Bianjing and retreated into the steppe to lick wounds they could not heal. Emperor Huizong did not die in captivity. He abdicated in 1130 to his son Qinzong, who, advised by a council that now included a young scholar from a place called Boston, focused the empire's energy not on poetry and palace gardens but on roads, schools, mold-houses, arsenals, terraced potato fields, and a navy.",
       "In the timeline I made, Genghis Khan was born in 1162 on schedule — but the Mongol confederation he raised could not, in 1211, overrun a Song frontier defended by matchlocks, field cannons, and walled cities laid out in the star pattern. The Mongol invasions of Eastern Europe never reached as far west. The Black Death, which the Mongol trade routes had carried to the gates of Europe in the 1340s, did not arrive the same way or at the same scale.",
-      "In the timeline I made, the Song dynasty did not become a Confucian fossil. By 1200 it had paper money backed by silver reserves, a postal service, a system of public examinations open to commoners (Wang Anshi's reforms, revived and extended), and the world's first steam engines pumping water out of coal mines in Shanxi. By 1300 there were trains. By 1400, the first telegraphs. By 1500, when Europeans began arriving on the coast in their caravels, they were met not by a curious empire but by an industrialized one.",
+      "In the timeline I made, the Song dynasty did not become a Confucian fossil. A surviving empire whose population raced past two hundred million — fed by the potato on land that had grown nothing, kept alive by the vial — held the largest skilled workforce and tax base on Earth. It already had paper money, movable-type printing, the magnetic compass, gunpowder, and the world's most advanced ironworks. With two centuries of peace and people, it did not need a stranger's knowledge to industrialize; it only needed the stability and the hands to do it itself. By 1500, when European caravels reached the coast, they did not find a curious empire. They found a crowded, confident, gunpowder-armed one that had never been conquered.",
       "I do not know if this world is better than the one I came from. It is different. It is unrecognizable. A girl in a coastal port in the year 2026, looking at a museum case, would not see a scroll of Bianjing — she would see a photograph of the city, taken yesterday, by someone who lives there.",
     ],
-    pullQuote: "By 1300 there were trains. By 1400, telegraphs. By 1500, an industrialized empire met the Europeans.",
+    pullQuote: "They did not find a curious empire. They found one that had never been conquered.",
   },
   {
     slug: "reflections",
@@ -126,19 +125,20 @@ export const chapters: Chapter[] = [
     subtitle: "A 10th grader thinks about the ethics of changing the past",
     era: "Author's note, 2026",
     paragraphs: [
-      "This is a fictional thought experiment for my World History class. I did not actually travel to 1120 CE. There is no vial. The tablet is sitting on my desk, and the gunpowder manual is on Google Docs.",
-      "But the exercise is not pretend. Asking which three objects from 2026 would most change the Northern Song forces you to understand what the Northern Song actually was. The answer is not chopsticks and Confucianism. The answer is one of the most sophisticated economies in pre-modern world history — paper money, movable-type printing, magnetic compasses, the world's largest cities, a meritocratic civil service — held together by an army that could not, in the end, beat steppe cavalry. The answer is a civilization that almost made it out of the medieval world by itself, and was stopped, twice, by the people on its northern border.",
-      "Why those three artifacts? Because each one repairs a different weakness without simply handing the empire a finished gift. Penicillin works because Song doctors already understood fermentation, already used moldy tofu on infected wounds, and already had a culture of empirical medicine — they were ready to receive it. Improved gunpowder works because Song alchemists had been refining saltpeter for two centuries and the imperial arsenal could cast bronze at scale; the modern formula is a single ratio they could verify in a week. The tablet works because Bianjing was already the most literate city in the world, with a tradition of public examinations and imperial libraries. Knowledge from a tablet is useless to a society that cannot read. The Northern Song could read.",
+      "This is a fictional thought experiment for my World History class. I did not actually travel to 1120 CE. There is no vial. The seed potatoes are in a paper bag in our kitchen, and the gunpowder manual is on Google Docs.",
+      "But the exercise is not pretend. Asking which three objects from 2026 would most change the Northern Song forces you to understand what the Northern Song actually was. The answer is not chopsticks and Confucianism. The answer is one of the most sophisticated economies in pre-modern world history — paper money, movable-type printing, magnetic compasses, the world's largest cities, a meritocratic civil service — held together by an army that could not, in the end, beat steppe cavalry, and by harvests that could fail. The answer is a civilization that almost made it out of the medieval world by itself.",
+      "Why those three artifacts? Because each one repairs a different weakness without simply handing the empire a finished gift. Penicillin works because Song doctors already understood fermentation, already used moldy tofu on infected wounds, and already had a culture of empirical medicine — they were ready to receive it. Improved gunpowder works because Song alchemists had been refining saltpeter for two centuries and the imperial arsenal could cast bronze at scale; the modern formula is a single ratio they could verify in a week. The potato works because the Northern Song already farmed intensively — terraced hillsides, two crops a year, an experimental peasantry that adopted new rice strains within a decade. A miracle crop is useless without farmers ready to plant it. The Northern Song had farmers.",
+      "Together the three form a kind of foundation. The vial keeps people alive; the potato feeds them; the manual defends them. And of the three, the potato may matter most, because population is the engine underneath everything else — every soldier, every farmer, every scholar and tax payment begins as a child who survived to grow up. A dynasty is strong not because its emperor is wise but because its people are many, fed, and healthy.",
       "What is the cost of changing the past? In the new timeline, Genghis Khan still lives — but his empire never spans Eurasia. Millions of people who died under the Mongol conquests do not die. But millions of people who would have been born in the world the Mongols made are also never born. There is no Yuan dynasty, no Marco Polo, no Ming voyages, no Manchu Qing. There is no United States as we know it, because the people who built it came from a Europe shaped by plagues and printing presses that came on a particular schedule. To save the Northern Song is to erase the world I grew up in. The girl in Boston in 2026, leaning over a museum case, would never have existed.",
-      "I am not sure this is a trade I am allowed to make. I am not sure anyone is. The point of the project is not to discover three magical fixes for a dynasty; it is to feel the weight of how interlocking history really is. Every artifact in a museum case is also a casualty list and a birth certificate. The Northern Song fell, and that falling is the floor I am standing on. If I save it, I am standing on nothing.",
-      "So I will leave the vial in the freezer, the gunpowder in the footnotes, and the tablet on my desk. And I will turn in this project, and try, for the rest of my education, to understand the past on its own terms instead of as a thing to fix.",
+      "I am not sure this is a trade I am allowed to make. I am not sure anyone is. The point of the project is not to discover three magical fixes for a dynasty; it is to feel the weight of how interlocking history really is. Every artifact in a museum case is also a casualty list and a birth certificate. The Northern Song fell, and that falling is the floor I am standing on. So I will leave the vial in the freezer, the gunpowder in the footnotes, and the seed potatoes in the kitchen — and try, for the rest of my education, to understand the past on its own terms instead of as a thing to fix.",
     ],
     pullQuote: "Every artifact in a museum case is also a casualty list and a birth certificate.",
   },
 ];
 
+// The three artifacts (used by the Artifacts page).
 export type Artifact = {
-  id: "vial" | "manual" | "mirror";
+  id: "vial" | "manual" | "potato";
   symbol: string;
   englishName: string;
   chineseName: string;
@@ -181,18 +181,18 @@ export const artifacts: Artifact[] = [
       "Matchlock muskets historically appear in China around 1450 CE and field cannons around 1350 CE. This artifact accelerates the firearms revolution by roughly 250–330 years.",
   },
   {
-    id: "mirror",
-    symbol: "镜",
-    englishName: "The Mirror",
-    chineseName: "明镜 · The Clear Glass",
-    oneLine: "A solar-powered tablet containing the next 900 years of knowledge.",
+    id: "potato",
+    symbol: "薯",
+    englishName: "The Tuber",
+    chineseName: "土豆 · The Potato",
+    oneLine: "A sack of seed potatoes — the crop that turns poor soil into people.",
     description:
-      "A ruggedized solar tablet preloaded with offline Wikipedia (Chinese + English), Google Maps with satellite overlay, the entire USDA agricultural extension library, basic chemistry and physics textbooks, future-history reference works, and a translation app.",
+      "A burlap sack of seed potatoes (Solanum tuberosum) carried back from 2026, with a printed handbook on planting from cut tubers, hilling, crop rotation, and cool-cellar storage. A potato is not a seed: cut one into pieces, leave an \"eye\" on each, and every piece grows into a whole new plant — a crop that copies itself.",
     whyItWorks:
-      "Bianjing was the most literate city on Earth in 1120. The imperial library system, civil-service examination, and movable-type printing meant that knowledge written down could be copied, distributed, and acted on at industrial scale.",
+      "The potato thrives exactly where rice and wheat fail — cold uplands, thin soil, terraced hillsides, the marginal land no one farmed. It yields two to four times the calories per acre of grain. The Northern Song already had an intensive, experimental farming culture and a dense, skilled peasantry, and could adopt it within a single growing season.",
     historicalImpact:
-      "Crop yields rise 30–50% within a generation via crop rotation, composting, and selective seed breeding. The germ theory of disease unlocks the vial's full potential. Modern cartography means the empire can map and patrol its own frontier. Future history becomes a strategic roadmap: the empire knows the Mongols are coming, and prepares.",
+      "Famine — the recurring killer of Chinese dynasties — loses its grip. Marginal land across every prefecture comes into production. Within two generations the population climbs past 200 million. And a fed population is the foundation of everything else: a tax base, a labor force, and an army. Population growth is dynastic strength.",
     realWorldNote:
-      "Of the three artifacts, the tablet is by far the most ethically dangerous. Information, unlike medicine or weapons, scales without limit and shapes belief. The narrator imposes a personal rule: the tablet is a library, not an oracle.",
+      "The potato is native to the Andes of South America and did not reach China until around 1600 CE, carried by Spanish and Dutch traders. Historians credit the potato, sweet potato, and maize with China's population explosion under the Qing dynasty — from roughly 150 million to over 400 million people. Bringing it to 1120 advances that demographic revolution by nearly five centuries.",
   },
 ];

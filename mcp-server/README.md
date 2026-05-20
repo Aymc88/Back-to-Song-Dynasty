@@ -14,7 +14,7 @@ the story; this server lets you *talk to* people inside it.
 | --- | --- |
 | `list_characters()` | Returns voice cards for every available character. |
 | `speak_as(character, situation)` | Puts Claude in-character for a given scene. |
-| `artifact_brief(artifact)` | Structured facts about one of the three artifacts (`vial`, `manual`, `mirror`). |
+| `artifact_brief(artifact)` | Structured facts about one of the three artifacts (`vial`, `manual`, `potato`). |
 | `historical_brief()` | A one-page brief on the Northern Song under Emperor Huizong. |
 
 ## Install

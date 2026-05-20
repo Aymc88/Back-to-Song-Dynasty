@@ -26,7 +26,7 @@ server** that lets Claude role-play characters from the story.
 | --- | --- | --- | --- |
 | 霉 | **The Vial** | A sealed culture of *Penicillium chrysogenum* + germ-theory handbook | Song doctors already fermented preparations and used mold on wounds |
 | 火 | **The Manual** | Modern black-powder formula (75/15/10) + matchlock musket + cannon designs | Song alchemists had centuries of saltpeter experience and imperial bronze foundries |
-| 镜 | **The Mirror** | A solar-powered tablet with offline Wikipedia, maps, agronomy library | Bianjing was the most literate city on Earth, with movable-type printing since 1040 |
+| 薯 | **The Tuber** | A sack of seed potatoes (*Solanum tuberosum*) + planting handbook | The Song farmed marginal upland intensively and could adopt the crop in one season; more food means more people |
 
 Read the full analysis on the **/artifacts** page of the site.
 

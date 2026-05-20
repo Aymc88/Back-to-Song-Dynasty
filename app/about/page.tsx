@@ -51,9 +51,11 @@ export default function AboutPage() {
           could cast bronze at scale. The modern formula is a single ratio.
         </li>
         <li>
-          <strong>A solar tablet</strong> works because Bianjing was the most
-          literate city on Earth in 1120 — knowledge written down could be
-          copied, examined, and applied at industrial scale.
+          <strong>Seed potatoes</strong> work because the Northern Song already
+          farmed marginal upland intensively, with an experimental peasantry — a
+          crop that thrives on poor, cold soil could be planted within a single
+          growing season, and population growth is the foundation of dynastic
+          strength.
         </li>
       </ul>
 
@@ -94,8 +96,8 @@ export default function AboutPage() {
         museum case is also a casualty list and a birth certificate, and that
         understanding the past on its own terms is harder, and more honest,
         than trying to fix it. The story ends with the narrator leaving the
-        vial in the freezer, the gunpowder in the footnotes, and the tablet on
-        her desk.
+        vial in the freezer, the gunpowder in the footnotes, and the seed
+        potatoes in the kitchen.
       </p>
 
       <div className="ink-divider mt-10" aria-hidden>❦</div>

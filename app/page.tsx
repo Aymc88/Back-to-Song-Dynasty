@@ -101,7 +101,7 @@ export default function Home() {
         </h2>
         <p className="text-center text-muted italic mb-12">
           One object that heals the body. One that changes how the world fights.
-          One that holds everything humans have ever written down.
+          One that feeds a people into a nation.
         </p>
         <div className="grid md:grid-cols-3 gap-6">
           {artifacts.map((a, i) => (

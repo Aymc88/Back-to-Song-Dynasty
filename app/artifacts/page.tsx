@@ -4,7 +4,7 @@ import { artifacts } from "@/data/chapters";
 export const metadata = {
   title: "The Three Artifacts — Back to the Song Dynasty",
   description:
-    "Penicillin, improved gunpowder, and a solar-powered tablet — and what they each do to the Northern Song.",
+    "Penicillin, improved gunpowder, and the potato — and what they each do to the Northern Song.",
 };
 
 export default function ArtifactsPage() {

@@ -135,27 +135,27 @@ ARTIFACTS: dict[str, dict[str, str]] = {
             "Northern Song survives."
         ),
     },
-    "mirror": {
-        "name": "The Mirror (solar-powered tablet)",
-        "spec": "Ruggedized solar tablet, offline Wikipedia + USDA agronomy library + global satellite maps",
+    "potato": {
+        "name": "The Tuber (seed potatoes)",
+        "spec": "Solanum tuberosum seed tubers; propagated by cutting tubers, each eye grows a full plant",
         "readiness": (
-            "Bianjing was the most literate city on Earth in 1120, with "
-            "movable-type printing (Bi Sheng, 1040s), imperial libraries, "
-            "and a civil-service examination system that could absorb new "
-            "knowledge at industrial scale."
+            "The Northern Song already farmed intensively - terraced "
+            "hillsides, two crops a year, an experimental peasantry. The "
+            "potato slots onto marginal upland soil within a single "
+            "growing season."
         ),
         "impact": (
-            "Agricultural yields rise 30-50% within a generation via crop "
-            "rotation, composting, and selective seed breeding. Germ "
-            "theory unlocks the vial's full potential. Future history "
-            "becomes a strategic roadmap."
+            "Yields 2-4x the calories per acre of grain and grows on poor, "
+            "cold, stony land. Famine loses its grip; population climbs "
+            "past 200 million within two generations. A fed population is "
+            "the tax base, workforce, and army a strong dynasty is built on."
         ),
     },
 }
 
 
 CharacterId = Literal["emperor_huizong", "master_shen", "old_wang", "the_narrator"]
-ArtifactId = Literal["vial", "manual", "mirror"]
+ArtifactId = Literal["vial", "manual", "potato"]
 
 
 @mcp.tool()
@@ -199,10 +199,10 @@ def artifact_brief(artifact: ArtifactId) -> str:
     Return structured facts about one of the three artifacts.
 
     Args:
-        artifact: One of 'vial', 'manual', 'mirror'.
+        artifact: One of 'vial', 'manual', 'potato'.
     """
     if artifact not in ARTIFACTS:
-        return f"Unknown artifact '{artifact}'. Use 'vial', 'manual', or 'mirror'."
+        return f"Unknown artifact '{artifact}'. Use 'vial', 'manual', or 'potato'."
     a = ARTIFACTS[artifact]
     return (
         f"# {a['name']}\n\n"
