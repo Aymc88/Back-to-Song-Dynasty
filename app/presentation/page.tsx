@@ -6,11 +6,12 @@ import Link from "next/link";
 export default function Presentation() {
   const [slide, setSlide] = useState(1);
   const [showTitle, setShowTitle] = useState(false);
+  const totalSlides = 15;
 
   const nextSlide = () => {
     if (slide === 1 && !showTitle) {
       setShowTitle(true);
-    } else if (slide < 6) {
+    } else if (slide < totalSlides) {
       setSlide(s => s + 1);
     }
   };
@@ -36,141 +37,361 @@ export default function Presentation() {
     return () => window.removeEventListener("keydown", handleKeyDown);
   }, [slide, showTitle]);
 
+  // CSS for graph
+  const graphStyles = `
+    .graph-container {
+      width: 100%;
+      height: 300px;
+      display: flex;
+      align-items: flex-end;
+      gap: 2rem;
+      padding-top: 2rem;
+      border-bottom: 2px solid rgba(26,20,16,0.2);
+      border-left: 2px solid rgba(26,20,16,0.2);
+      position: relative;
+    }
+    .bar-group {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-end;
+      height: 100%;
+      flex: 1;
+      justify-content: center;
+      position: relative;
+    }
+    .bar {
+      width: 60px;
+      background-color: var(--color-ink);
+      position: relative;
+      transition: height 1s ease-out;
+      display: flex;
+      justify-content: center;
+    }
+    .bar.cinnabar {
+      background-color: var(--color-cinnabar);
+    }
+    .bar-label {
+      position: absolute;
+      bottom: -30px;
+      white-space: nowrap;
+      font-weight: 500;
+      color: var(--color-inkSoft);
+    }
+    .bar-value {
+      position: absolute;
+      top: -25px;
+      font-weight: bold;
+      color: var(--color-ink);
+    }
+  `;
+
   return (
     <div 
       className="fixed inset-0 z-50 bg-parchment text-ink overflow-hidden flex items-center justify-center cursor-pointer select-none"
       onClick={nextSlide}
     >
-      <div className="absolute top-4 right-6 text-sm text-muted">
-        Slide {slide} / 6
+      <style dangerouslySetInnerHTML={{ __html: graphStyles }} />
+      <div className="absolute top-4 right-6 text-sm text-muted z-30 bg-parchment/80 px-2 py-1 rounded">
+        Slide {slide} / {totalSlides}
       </div>
-      <Link href="/" className="absolute top-4 left-6 text-sm text-muted hover:text-cinnabar transition-colors z-10" onClick={(e) => e.stopPropagation()}>
+      <Link href="/" className="absolute top-4 left-6 text-sm text-muted hover:text-cinnabar transition-colors z-30 bg-parchment/80 px-2 py-1 rounded" onClick={(e) => e.stopPropagation()}>
         ← Exit
       </Link>
 
-      {/* Slide 1 */}
-      <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 1 ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-        <div className={`flex flex-col items-center transition-opacity duration-[2000ms] ease-in-out ${showTitle ? 'opacity-100' : 'opacity-0'}`}>
-          <h1 className="font-display text-5xl md:text-7xl text-ink text-center mb-4">
-            Back to the <span className="text-cinnabar italic">Song Dynasty</span>
-          </h1>
-          <p className="text-lg md:text-xl text-inkSoft font-serif italic text-center max-w-2xl">
-            Top 3 Common Items that Can Make You a Song Dynasty Millionaire
+      {/* Background images for specific slides */}
+      <div className="absolute inset-0 z-0 pointer-events-none opacity-20 transition-opacity duration-1000">
+        <img src="/song_cityscape_1779649626968.png" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${slide === 1 ? 'opacity-100' : 'opacity-0'}`} alt="" />
+        <img src="/rainbow-bridge.jpg" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${slide === 2 ? 'opacity-100' : 'opacity-0'}`} alt="" />
+        <img src="/jurchen_cavalry_1779649569638.png" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${slide === 3 ? 'opacity-100' : 'opacity-0'}`} alt="" />
+        <img src="/amber_room_1779649582249.png" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${slide === 4 ? 'opacity-100' : 'opacity-0'}`} alt="" />
+      </div>
+
+      <div className="relative z-10 w-full max-w-6xl px-12 mx-auto h-full flex items-center justify-center pointer-events-none">
+        
+        {/* Slide 1: Topic Introduction */}
+        <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 1 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+          <div className={`flex flex-col items-center transition-opacity duration-[2000ms] ease-in-out ${showTitle ? 'opacity-100' : 'opacity-0'}`}>
+            <h1 className="font-display text-5xl md:text-7xl text-ink text-center mb-4 bg-parchment/80 p-6 rounded shadow-lg backdrop-blur-sm">
+              Back to the <span className="text-cinnabar italic">Song Dynasty</span>
+            </h1>
+            <p className="text-lg md:text-xl text-inkSoft font-serif italic text-center max-w-2xl bg-parchment/80 p-4 rounded shadow-lg backdrop-blur-sm">
+              Top 3 Common Items that Can Make You a Song Dynasty Millionaire
+            </p>
+          </div>
+          {!showTitle && (
+            <div className="absolute bottom-12 text-ink text-sm animate-pulse bg-parchment/80 px-4 py-2 rounded">
+              Tap to begin
+            </div>
+          )}
+        </div>
+
+        {/* Slide 2: Background - 1120 CE */}
+        <div className={`absolute inset-0 flex items-center transition-all duration-1000 ${slide === 2 ? 'opacity-100 translate-x-0 pointer-events-auto' : slide < 2 ? 'opacity-0 translate-x-12 pointer-events-none' : 'opacity-0 -translate-x-12 pointer-events-none'}`}>
+          <div className="w-1/2 ml-12 bg-parchment/90 p-8 rounded shadow-xl backdrop-blur-md">
+            <h2 className="font-display text-5xl mb-6">1120 CE: Peak of the Northern Song</h2>
+            <p className="text-2xl text-inkSoft leading-relaxed mb-6">
+              The capital Bianjing is a bustling metropolis of over 1 million people. It has paper money, a thriving market economy, and advanced technology.
+            </p>
+            <ul className="text-xl text-inkSoft space-y-4 list-disc pl-6">
+              <li>Movable type printing presses spread knowledge.</li>
+              <li>A meritocratic society driven by imperial exams.</li>
+              <li>A golden age of art and commerce.</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Slide 3: Background - Jin Invasion */}
+        <div className={`absolute inset-0 flex justify-end items-center transition-all duration-1000 ${slide === 3 ? 'opacity-100 translate-x-0 pointer-events-auto' : slide < 3 ? 'opacity-0 translate-x-12 pointer-events-none' : 'opacity-0 -translate-x-12 pointer-events-none'}`}>
+          <div className="w-1/2 mr-12 bg-parchment/90 p-8 rounded shadow-xl backdrop-blur-md">
+            <h2 className="font-display text-5xl mb-6 text-cinnabar">The Impending Doom</h2>
+            <p className="text-2xl text-inkSoft leading-relaxed mb-6">
+              In just seven years, the Jurchen Jin dynasty will invade from the north.
+            </p>
+            <ul className="text-xl text-inkSoft space-y-4 list-disc pl-6">
+              <li>1127 CE: The Jingkang Incident.</li>
+              <li>Bianjing is sacked, both emperors captured.</li>
+              <li>The dynasty is shattered, fleeing south.</li>
+              <li>Millions perish in the ensuing chaos.</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Slide 4: Purpose */}
+        <div className={`absolute inset-0 flex flex-col items-center justify-center transition-all duration-1000 ${slide === 4 ? 'opacity-100 scale-100 pointer-events-auto' : slide < 4 ? 'opacity-0 scale-95 pointer-events-none' : 'opacity-0 scale-105 pointer-events-none'}`}>
+          <div className="bg-parchment/90 p-12 rounded shadow-2xl backdrop-blur-md max-w-4xl text-center">
+            <h2 className="font-display text-4xl mb-6 uppercase tracking-widest">The Thought Experiment</h2>
+            <p className="text-3xl text-inkSoft font-serif italic mb-8">
+              "You have seven years before the invasion. You can take one object from the future."
+            </p>
+            <p className="text-2xl">
+              Can one person with one modern item prevent the collapse of an empire and become immensely wealthy in the process? We analyze three candidates.
+            </p>
+          </div>
+        </div>
+
+        {/* Slide 5: The Choice */}
+        <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 5 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+          <h2 className="font-display text-4xl mb-16 text-center uppercase tracking-widest">The Three Artifacts</h2>
+          <div className="flex gap-12 text-center pointer-events-auto">
+            <div className="hover:scale-110 transition-transform duration-500 ease-out bg-white p-6 rounded shadow-lg">
+              <div className="seal text-6xl mb-6 mx-auto">霉</div>
+              <h3 className="font-display text-2xl">The Vial</h3>
+            </div>
+            <div className="hover:scale-110 transition-transform duration-500 ease-out bg-white p-6 rounded shadow-lg">
+              <div className="seal text-6xl mb-6 mx-auto">火</div>
+              <h3 className="font-display text-2xl">The Manual</h3>
+            </div>
+            <div className="hover:scale-110 transition-transform duration-500 ease-out bg-white p-6 rounded shadow-lg">
+              <div className="seal text-6xl mb-6 mx-auto">薯</div>
+              <h3 className="font-display text-2xl">The Tuber</h3>
+            </div>
+          </div>
+        </div>
+
+        {/* Slide 6: Artifact 1 - Penicillin */}
+        <div className={`absolute inset-0 flex items-center justify-center transition-transform duration-1000 ${slide === 6 ? 'scale-100 opacity-100 pointer-events-auto' : slide < 6 ? 'scale-90 opacity-0 pointer-events-none' : 'scale-110 opacity-0 pointer-events-none'}`}>
+          <div className="flex bg-white shadow-2xl rounded overflow-hidden max-w-5xl w-full">
+            <div className="w-1/2 relative min-h-[400px]">
+              <img src="/vial_of_mold_1779649595587.png" alt="Vial of Mold" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div className="w-1/2 p-12 flex flex-col justify-center">
+              <div className="seal text-5xl mb-4 text-ink">霉</div>
+              <h2 className="font-display text-5xl mb-2">The Vial</h2>
+              <div className="text-xl italic text-cinnabar mb-8">青霉 · The Mold</div>
+              <p className="text-2xl text-inkSoft leading-relaxed">
+                A frosted glass cylinder containing freeze-dried <em>Penicillium chrysogenum</em>, plus an illustrated wound manual.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Slide 7: Research - Mortality Graph */}
+        <div className={`absolute inset-0 flex flex-col items-center justify-center transition-all duration-1000 ${slide === 7 ? 'opacity-100 translate-y-0 pointer-events-auto' : slide < 7 ? 'opacity-0 translate-y-12 pointer-events-none' : 'opacity-0 -translate-y-12 pointer-events-none'}`}>
+          <h2 className="font-display text-4xl mb-8">Impact on Mortality Rates</h2>
+          <div className="max-w-4xl w-full bg-white p-8 rounded shadow-xl">
+            <div className="graph-container">
+              <div className="bar-group">
+                <div className="bar cinnabar" style={{ height: slide === 7 ? '90%' : '0%' }}>
+                  <span className="bar-value">~60%</span>
+                  <span className="bar-label">Battlefield (Before)</span>
+                </div>
+                <div className="bar" style={{ height: slide === 7 ? '20%' : '0%' }}>
+                  <span className="bar-value">~20%</span>
+                  <span className="bar-label">Battlefield (After)</span>
+                </div>
+              </div>
+              <div className="bar-group">
+                <div className="bar cinnabar" style={{ height: slide === 7 ? '45%' : '0%' }}>
+                  <span className="bar-value">~45%</span>
+                  <span className="bar-label">Infant (Before)</span>
+                </div>
+                <div className="bar" style={{ height: slide === 7 ? '15%' : '0%' }}>
+                  <span className="bar-value">~15%</span>
+                  <span className="bar-label">Infant (After)</span>
+                </div>
+              </div>
+            </div>
+            <p className="text-center mt-12 text-inkSoft italic text-lg">Estimated reduction in historical mortality rates with basic antibiotics.</p>
+          </div>
+        </div>
+
+        {/* Slide 8: Population Impact */}
+        <div className={`absolute inset-0 flex items-center justify-center transition-all duration-1000 ${slide === 8 ? 'opacity-100 scale-100 pointer-events-auto' : slide < 8 ? 'opacity-0 scale-90 pointer-events-none' : 'opacity-0 scale-110 pointer-events-none'}`}>
+          <div className="bg-white shadow-2xl rounded p-12 max-w-4xl w-full text-center relative overflow-hidden">
+             <h2 className="font-display text-5xl mb-6 relative z-10">The Resulting Boom</h2>
+             <p className="text-2xl text-inkSoft leading-relaxed mb-6 relative z-10">
+               Song medicine was empirical and ready to integrate new treatments.
+             </p>
+             <ul className="text-xl text-inkSoft space-y-4 list-disc pl-6 text-left max-w-2xl mx-auto relative z-10">
+               <li>Infections become survivable ailments.</li>
+               <li>Population grows by an additional 20 million within decades.</li>
+               <li>Unprecedented manpower for industry and defense.</li>
+             </ul>
+          </div>
+        </div>
+
+        {/* Slide 9: Artifact 2 - The Manual */}
+        <div className={`absolute inset-0 flex items-center justify-center transition-transform duration-1000 ${slide === 9 ? 'scale-100 opacity-100 pointer-events-auto' : slide < 9 ? 'scale-90 opacity-0 pointer-events-none' : 'scale-110 opacity-0 pointer-events-none'}`}>
+          <div className="flex bg-white shadow-2xl rounded overflow-hidden max-w-5xl w-full">
+            <div className="w-1/2 p-12 flex flex-col justify-center">
+              <div className="seal text-5xl mb-4 text-ink">火</div>
+              <h2 className="font-display text-5xl mb-2">The Manual</h2>
+              <div className="text-xl italic text-cinnabar mb-8">火药 · The Powder</div>
+              <p className="text-2xl text-inkSoft leading-relaxed">
+                A waterproof booklet with the optimal black-powder ratio (75% saltpeter, 15% charcoal, 10% sulfur) and matchlock musket schematics.
+              </p>
+            </div>
+            <div className="w-1/2 relative min-h-[400px]">
+              <img src="/waterproof_manual_1779649640725.png" alt="Waterproof Manual" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+
+        {/* Slide 10: Existing Tech vs Matchlock */}
+        <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 10 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+          <h2 className="font-display text-5xl mb-12 bg-white/90 p-4 rounded shadow">From Fire Lances to Muskets</h2>
+          <div className="flex gap-8 max-w-6xl w-full">
+            <div className="w-1/2 bg-white rounded shadow-xl overflow-hidden flex flex-col">
+              <img src="/fire_lance_1779649655511.png" className="h-64 object-cover" alt="Fire Lance" />
+              <div className="p-6">
+                <h3 className="font-display text-2xl mb-2 text-cinnabar">Song Fire Lance</h3>
+                <p className="text-lg">Inaccurate, short-range, prone to misfires. Used primarily for shock and awe rather than lethal piercing power.</p>
+              </div>
+            </div>
+            <div className="w-1/2 bg-white rounded shadow-xl overflow-hidden flex flex-col justify-center p-8">
+              <h3 className="font-display text-3xl mb-4">The Matchlock Upgrade</h3>
+              <ul className="text-xl space-y-4 list-disc pl-6">
+                <li>Perfected powder ratio maximizes explosive force.</li>
+                <li>Metal barrel and triggering mechanism.</li>
+                <li>Lethal armor-piercing capability at distance.</li>
+                <li>Can be mass-produced with Song bronze-casting tech.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Slide 11: Siege Defense */}
+        <div className={`absolute inset-0 flex items-center justify-center transition-all duration-1000 ${slide === 11 ? 'opacity-100 scale-100 pointer-events-auto' : slide < 11 ? 'opacity-0 scale-90 pointer-events-none' : 'opacity-0 scale-110 pointer-events-none'}`}>
+          <div className="flex bg-white shadow-2xl rounded overflow-hidden max-w-6xl w-full">
+            <div className="w-1/2 relative min-h-[450px]">
+              <img src="/siege_defense_1779649678883.png" alt="Siege Defense" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div className="w-1/2 p-12 flex flex-col justify-center">
+              <h2 className="font-display text-5xl mb-6 text-cinnabar">Repelling the Jin</h2>
+              <p className="text-xl text-inkSoft leading-relaxed mb-6">
+                When the Jurchen cavalry arrives in 1127, they face disciplined ranks of musketeers on the walls of Bianjing.
+              </p>
+              <p className="text-xl text-inkSoft leading-relaxed font-bold">
+                The invasion breaks. The Northern Song survives. The trajectory of global warfare is accelerated by 400 years.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Slide 12: Artifact 3 - The Tuber */}
+        <div className={`absolute inset-0 flex items-center justify-center transition-transform duration-1000 ${slide === 12 ? 'scale-100 opacity-100 pointer-events-auto' : slide < 12 ? 'scale-90 opacity-0 pointer-events-none' : 'scale-110 opacity-0 pointer-events-none'}`}>
+          <div className="flex bg-white shadow-2xl rounded overflow-hidden max-w-5xl w-full">
+             <div className="w-1/2 p-12 flex flex-col justify-center">
+              <div className="seal text-5xl mb-4 text-ink">薯</div>
+              <h2 className="font-display text-5xl mb-2">The Tuber</h2>
+              <div className="text-xl italic text-cinnabar mb-8">土豆 · The Potato</div>
+              <p className="text-2xl text-inkSoft leading-relaxed">
+                A burlap sack of seed potatoes. A miracle crop that turns poor, marginal soil into people.
+              </p>
+            </div>
+            <div className="w-1/2 relative min-h-[400px]">
+              <img src="/seed_potatoes_1779649692896.png" alt="Seed Potatoes" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+
+        {/* Slide 13: Yield Research */}
+        <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 13 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+          <h2 className="font-display text-5xl mb-12 bg-white/90 p-4 rounded shadow">Caloric Yield Comparison</h2>
+          <div className="flex gap-8 max-w-6xl w-full">
+            <div className="w-1/2 bg-white rounded shadow-xl overflow-hidden flex flex-col">
+              <img src="/terraced_farming_1779649705699.png" className="h-64 object-cover" alt="Terraced Farming" />
+            </div>
+            <div className="w-1/2 bg-white rounded shadow-xl overflow-hidden flex flex-col justify-center p-8">
+              <h3 className="font-display text-3xl mb-4 text-cinnabar">The Marginal Soil Miracle</h3>
+              <ul className="text-xl space-y-4 list-disc pl-6">
+                <li>Potatoes thrive in cold uplands where rice and wheat fail.</li>
+                <li>They yield <strong>2x to 4x the calories</strong> per acre compared to traditional grains.</li>
+                <li>Hidden underground, protecting them from raiders and harsh weather.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Slide 14: Eradicating Famine */}
+        <div className={`absolute inset-0 flex items-center justify-center transition-all duration-1000 ${slide === 14 ? 'opacity-100 scale-100 pointer-events-auto' : slide < 14 ? 'opacity-0 scale-90 pointer-events-none' : 'opacity-0 scale-110 pointer-events-none'}`}>
+          <div className="flex bg-white shadow-2xl rounded overflow-hidden max-w-6xl w-full">
+             <div className="w-1/2 relative min-h-[450px]">
+              <img src="/bumper_crop_1779649719878.png" alt="Bumper Crop" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div className="w-1/2 p-12 flex flex-col justify-center bg-parchment">
+              <h2 className="font-display text-5xl mb-6 text-cinnabar">Eradicating Famine</h2>
+              <p className="text-xl text-inkSoft leading-relaxed mb-6">
+                With a steady, reliable food source that doesn't depend on perfect weather or prime riverfront land, famine loses its grip on the empire.
+              </p>
+              <p className="text-xl text-inkSoft leading-relaxed font-bold">
+                A fed population is the foundation of dynastic strength, enabling massive armies, economic surplus, and unshakeable stability.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Slide 15: Conclusion & Vote */}
+        <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 15 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+          <h2 className="font-display text-6xl mb-6 bg-white/90 p-4 rounded shadow">Conclusion</h2>
+          <p className="text-2xl text-inkSoft mb-12 bg-white/90 p-4 rounded shadow text-center max-w-3xl">
+            Penicillin saves lives. Muskets save the empire. Potatoes save the future. Which artifact gives you the greatest leverage to change history?
           </p>
-        </div>
-        {!showTitle && (
-          <div className="absolute bottom-12 text-muted text-sm animate-pulse">
-            Tap to begin
+          <div className="p-6 bg-white rounded-xl shadow-2xl mb-8 pointer-events-auto">
+            <img 
+              src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://back-to-song-dynasty.vercel.app" 
+              alt="QR Code to Vote" 
+              className="w-64 h-64 hover:scale-105 transition-transform duration-300"
+            />
           </div>
-        )}
-      </div>
+          <p className="text-3xl font-display text-cinnabar bg-white/90 px-6 py-2 rounded shadow">Scan to Cast Your Vote</p>
+        </div>
 
-      {/* Slide 2 */}
-      <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 2 ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-        <h2 className="font-display text-4xl mb-16 text-center uppercase tracking-widest">The Three Artifacts</h2>
-        <div className="flex gap-12 text-center">
-          <div className="hover:scale-110 transition-transform duration-500 ease-out">
-            <div className="seal text-6xl mb-6 mx-auto">霉</div>
-            <h3 className="font-display text-2xl">The Vial</h3>
-          </div>
-          <div className="hover:scale-110 transition-transform duration-500 ease-out">
-            <div className="seal text-6xl mb-6 mx-auto">火</div>
-            <h3 className="font-display text-2xl">The Manual</h3>
-          </div>
-          <div className="hover:scale-110 transition-transform duration-500 ease-out">
-            <div className="seal text-6xl mb-6 mx-auto">薯</div>
-            <h3 className="font-display text-2xl">The Tuber</h3>
-          </div>
-        </div>
-      </div>
-
-      {/* Slide 3 */}
-      <div className={`absolute inset-0 flex items-center justify-center transition-transform duration-1000 ${slide === 3 ? 'scale-100 opacity-100' : slide < 3 ? 'scale-90 opacity-0 pointer-events-none' : 'scale-110 opacity-0 pointer-events-none'}`}>
-        <div className="max-w-4xl w-full flex items-center gap-12 px-12 group cursor-default">
-          <div className="seal text-[120px] leading-none shrink-0 group-hover:scale-125 transition-transform duration-500 ease-out">霉</div>
-          <div>
-            <h2 className="font-display text-5xl mb-2">The Vial</h2>
-            <div className="text-xl italic text-cinnabar mb-8">青霉 · The Mold</div>
-            <p className="text-2xl text-inkSoft leading-relaxed mb-6">
-              A frosted glass cylinder containing freeze-dried Penicillium chrysogenum, plus an illustrated wound manual.
-            </p>
-            <ul className="text-xl text-inkSoft space-y-4 list-disc pl-6">
-              <li>Song medicine was empirical and ready for it.</li>
-              <li>Battlefield mortality drops ~60%.</li>
-              <li>Infant and maternal mortality drops ~30%.</li>
-              <li>Population grows by an additional 20 million.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* Slide 4 */}
-      <div className={`absolute inset-0 flex items-center justify-center transition-transform duration-1000 ${slide === 4 ? 'scale-100 opacity-100' : slide < 4 ? 'scale-90 opacity-0 pointer-events-none' : 'scale-110 opacity-0 pointer-events-none'}`}>
-        <div className="max-w-4xl w-full flex items-center gap-12 px-12 group cursor-default">
-          <div className="seal text-[120px] leading-none shrink-0 group-hover:scale-125 transition-transform duration-500 ease-out">火</div>
-          <div>
-            <h2 className="font-display text-5xl mb-2">The Manual</h2>
-            <div className="text-xl italic text-cinnabar mb-8">火药 · The Powder</div>
-            <p className="text-2xl text-inkSoft leading-relaxed mb-6">
-              A waterproof booklet with the improved black-powder ratio (75% saltpeter, 15% charcoal, 10% sulfur) and matchlock musket diagrams.
-            </p>
-            <ul className="text-xl text-inkSoft space-y-4 list-disc pl-6">
-              <li>Song China already possessed gunpowder & bronze casting.</li>
-              <li>The Jin invasion breaks against cannon fire.</li>
-              <li>The dynasty survives 1127 CE.</li>
-              <li>Changes the shape of warfare for 1,000 years.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* Slide 5 */}
-      <div className={`absolute inset-0 flex items-center justify-center transition-transform duration-1000 ${slide === 5 ? 'scale-100 opacity-100' : slide < 5 ? 'scale-90 opacity-0 pointer-events-none' : 'scale-110 opacity-0 pointer-events-none'}`}>
-        <div className="max-w-4xl w-full flex items-center gap-12 px-12 group cursor-default">
-          <div className="seal text-[120px] leading-none shrink-0 group-hover:scale-125 transition-transform duration-500 ease-out">薯</div>
-          <div>
-            <h2 className="font-display text-5xl mb-2">The Tuber</h2>
-            <div className="text-xl italic text-cinnabar mb-8">土豆 · The Potato</div>
-            <p className="text-2xl text-inkSoft leading-relaxed mb-6">
-              A burlap sack of seed potatoes. A crop that turns poor, marginal soil into people.
-            </p>
-            <ul className="text-xl text-inkSoft space-y-4 list-disc pl-6">
-              <li>Thrives where rice and wheat fail (cold uplands).</li>
-              <li>Yields 2x to 4x the calories per acre of grain.</li>
-              <li>Famine loses its grip on the empire.</li>
-              <li>A fed population is the foundation of dynastic strength.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* Slide 6 */}
-      <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 6 ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-        <h2 className="font-display text-5xl mb-12">Cast Your Vote</h2>
-        <div className="p-4 bg-white rounded-xl shadow-xl mb-8">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img 
-            src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://back-to-song-dynasty.vercel.app" 
-            alt="QR Code to Vote" 
-            className="w-64 h-64"
-          />
-        </div>
-        <p className="text-2xl text-muted italic">Scan to choose your artifact.</p>
       </div>
 
       {/* Navigation Controls Overlay */}
-      <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-4 z-10" onClick={(e) => e.stopPropagation()}>
+      <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-4 z-20" onClick={(e) => e.stopPropagation()}>
         <button 
           onClick={prevSlide}
-          className={`px-4 py-2 rounded border border-ink/20 hover:border-cinnabar transition-colors ${slide === 1 && !showTitle ? 'opacity-30 cursor-not-allowed' : 'opacity-100'}`}
+          className={`px-6 py-3 rounded border border-ink/20 hover:border-cinnabar transition-colors bg-white/50 backdrop-blur ${slide === 1 && !showTitle ? 'opacity-30 cursor-not-allowed' : 'opacity-100 hover:bg-white'}`}
           disabled={slide === 1 && !showTitle}
         >
           Previous
         </button>
         <button 
           onClick={nextSlide}
-          className={`px-4 py-2 rounded border border-ink/20 hover:border-cinnabar transition-colors ${slide === 6 ? 'opacity-30 cursor-not-allowed' : 'opacity-100'}`}
-          disabled={slide === 6}
+          className={`px-6 py-3 rounded border border-ink/20 hover:border-cinnabar transition-colors bg-white/50 backdrop-blur ${slide === totalSlides ? 'opacity-30 cursor-not-allowed' : 'opacity-100 hover:bg-white'}`}
+          disabled={slide === totalSlides}
         >
           Next
         </button>
