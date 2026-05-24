@@ -49,10 +49,15 @@ export default function Presentation() {
       </Link>
 
       {/* Slide 1 */}
-      <div className={`absolute inset-0 flex items-center justify-center transition-opacity duration-1000 ${slide === 1 ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
-        <h1 className={`font-display text-6xl md:text-8xl text-ink transition-opacity duration-[2000ms] ease-in-out ${showTitle ? 'opacity-100' : 'opacity-0'}`}>
-          Back to the <span className="text-cinnabar italic">Song Dynasty</span>
-        </h1>
+      <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 1 ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
+        <div className={`flex flex-col items-center transition-opacity duration-[2000ms] ease-in-out ${showTitle ? 'opacity-100' : 'opacity-0'}`}>
+          <h1 className="font-display text-5xl md:text-7xl text-ink text-center mb-4">
+            Back to the <span className="text-cinnabar italic">Song Dynasty</span>
+          </h1>
+          <p className="text-lg md:text-xl text-inkSoft font-serif italic text-center max-w-2xl">
+            Top 3 Common Items that Can Make You a Song Dynasty Millionaire
+          </p>
+        </div>
         {!showTitle && (
           <div className="absolute bottom-12 text-muted text-sm animate-pulse">
             Tap to begin
