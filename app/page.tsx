@@ -25,6 +25,14 @@ export default function Home() {
             They are carrying three objects from the future. They have
             seven years before the Jin invasion. They have one decision to make.
           </p>
+          <div className="flex justify-center mt-8">
+            <Link 
+              href="/presentation" 
+              className="px-8 py-3 border-2 border-cinnabar text-cinnabar hover:bg-cinnabar hover:text-parchment transition-colors uppercase tracking-widest text-sm font-display rounded-sm"
+            >
+              Start Presentation
+            </Link>
+          </div>
         </div>
 
         <div
