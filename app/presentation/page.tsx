@@ -69,15 +69,15 @@ export default function Presentation() {
       <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 2 ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
         <h2 className="font-display text-4xl mb-16 text-center uppercase tracking-widest">The Three Artifacts</h2>
         <div className="flex gap-12 text-center">
-          <div>
+          <div className="hover:scale-110 transition-transform duration-500 ease-out">
             <div className="seal text-6xl mb-6 mx-auto">霉</div>
             <h3 className="font-display text-2xl">The Vial</h3>
           </div>
-          <div>
+          <div className="hover:scale-110 transition-transform duration-500 ease-out">
             <div className="seal text-6xl mb-6 mx-auto">火</div>
             <h3 className="font-display text-2xl">The Manual</h3>
           </div>
-          <div>
+          <div className="hover:scale-110 transition-transform duration-500 ease-out">
             <div className="seal text-6xl mb-6 mx-auto">薯</div>
             <h3 className="font-display text-2xl">The Tuber</h3>
           </div>
