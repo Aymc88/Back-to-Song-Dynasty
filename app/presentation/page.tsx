@@ -427,7 +427,7 @@ export default function Presentation() {
         <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 18 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
           <h2 className="font-display text-6xl mb-6 bg-white/90 p-4 rounded shadow">Conclusion</h2>
           <p className="text-2xl text-inkSoft mb-12 bg-white/90 p-4 rounded shadow text-center max-w-3xl">
-            Penicillin saves lives. Pearls buy survival. Potatoes save the future. Which artifact gives you the greatest advantage to survive, acquire immense wealth, and successfully fulfill your "Book Delivery Mission"?
+            Penicillin saves lives. Pearls buy survival. Potatoes save the future. Which artifact gives you the greatest advantage to survive, acquire immense wealth, and successfully fulfill your mission?
           </p>
           <div className="p-6 bg-white rounded-xl shadow-2xl mb-8 pointer-events-auto">
             <img 
