@@ -6,11 +6,11 @@ export default function Poll() {
   const [voted, setVoted] = useState(false);
   const [results, setResults] = useState({
     penicillin: 42,
-    firearms: 15,
+    pearls: 15,
     potatoes: 89,
   });
 
-  const handleVote = (choice: "penicillin" | "firearms" | "potatoes") => {
+  const handleVote = (choice: "penicillin" | "pearls" | "potatoes") => {
     setResults((prev) => ({
       ...prev,
       [choice]: prev[choice] + 1,
@@ -18,7 +18,7 @@ export default function Poll() {
     setVoted(true);
   };
 
-  const totalVotes = results.penicillin + results.firearms + results.potatoes;
+  const totalVotes = results.penicillin + results.pearls + results.potatoes;
 
   return (
     <div className="max-w-2xl mx-auto p-8 paper-card rounded-sm text-center">
@@ -32,10 +32,10 @@ export default function Poll() {
             霉 Penicillin
           </button>
           <button
-            onClick={() => handleVote("firearms")}
+            onClick={() => handleVote("pearls")}
             className="p-4 border border-ink/20 hover:border-cinnabar hover:text-cinnabar transition-colors rounded-sm text-lg"
           >
-            火 Firearms
+            珠 Pearls
           </button>
           <button
             onClick={() => handleVote("potatoes")}
@@ -59,11 +59,11 @@ export default function Poll() {
             </div>
             <div className="flex flex-col text-left">
               <div className="flex justify-between text-sm mb-1">
-                <span>火 Firearms</span>
-                <span>{Math.round((results.firearms / totalVotes) * 100)}%</span>
+                <span>珠 Pearls</span>
+                <span>{Math.round((results.pearls / totalVotes) * 100)}%</span>
               </div>
               <div className="w-full bg-ink/10 h-2 rounded-full overflow-hidden">
-                <div className="bg-cinnabar h-full" style={{ width: `${(results.firearms / totalVotes) * 100}%` }} />
+                <div className="bg-cinnabar h-full" style={{ width: `${(results.pearls / totalVotes) * 100}%` }} />
               </div>
             </div>
             <div className="flex flex-col text-left">
@@ -75,6 +75,17 @@ export default function Poll() {
                 <div className="bg-cinnabar h-full" style={{ width: `${(results.potatoes / totalVotes) * 100}%` }} />
               </div>
             </div>
+          </div>
+        
+          <div className="mt-8 pt-6 border-t border-ink/10">
+            <h4 className="font-display text-xl text-ink mb-4">Phase 2: The Wealth Simulation</h4>
+            <p className="text-sm text-inkSoft mb-4">You have made your choice. Now, can you amass a fortune before the Jurchen army arrives?</p>
+            <a 
+              href="/game.html" 
+              className="inline-block px-8 py-3 bg-cinnabar text-white hover:bg-red-700 transition-colors uppercase tracking-widest text-sm font-display rounded-sm shadow-lg"
+            >
+              Start Simulation
+            </a>
           </div>
         </div>
       )}

@@ -431,7 +431,7 @@ export default function Presentation() {
           </p>
           <div className="p-6 bg-white rounded-xl shadow-2xl mb-8 pointer-events-auto">
             <img 
-              src="https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=https://back-to-song-dynasty.vercel.app" 
+              src="/qr-code-s.png" 
               alt="QR Code to Vote" 
               className="w-64 h-64 hover:scale-105 transition-transform duration-300"
             />

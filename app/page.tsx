@@ -93,7 +93,7 @@ export default function Home() {
           <p>The cards stopped.</p>
           <ul className="list-none space-y-4">
             <li><strong>#1: PENICILLIN</strong> – A clay pot of living mold. An illustrated wound manual. No refrigeration. No lab. Just you and the green death of infection.</li>
-            <li><strong>#2: FIREARMS</strong> – One breech-loading flintlock pistol. Twelve paper cartridges. One cleaning rod. Twelve chances to change history. Then silence.</li>
+            <li><strong>#2: PEARLS</strong> – A burlap sack overflowing with massive, flawless, artificial pearls from the future. Instant immense wealth.</li>
             <li><strong>#3: POTATOES</strong> – Twenty seed potatoes. Hand-drawn planting diagrams. Storage instructions for humid climates. A famine-proof future wrapped in brown skin.</li>
           </ul>
           <p>Agent A tilted her head.</p>
@@ -159,13 +159,13 @@ export default function Home() {
 
           <Link href="/artifacts#manual" className="paper-card p-6 rounded-sm group transition-transform hover:-translate-y-1 block">
             <div className="flex items-start justify-between mb-4">
-              <span className="seal">火</span>
+              <span className="seal">珠</span>
             </div>
             <h3 className="font-display text-2xl text-ink mb-1">
-              The Manual
+              The Pearls
             </h3>
             <div className="text-sm italic text-cinnabar mb-3">
-              火药 · The Powder
+              珍珠 · The Pearl
             </div>
           </Link>
 
