@@ -61,27 +61,27 @@ export default function Presentation() {
     }
     .bar {
       width: 60px;
-      background-color: var(--color-ink);
+      background-color: #1A1410; /* ink color */
       position: relative;
       transition: height 1s ease-out;
       display: flex;
       justify-content: center;
     }
     .bar.cinnabar {
-      background-color: var(--color-cinnabar);
+      background-color: #DB4437; /* cinnabar color */
     }
     .bar-label {
       position: absolute;
       bottom: -30px;
       white-space: nowrap;
       font-weight: 500;
-      color: var(--color-inkSoft);
+      color: rgba(26,20,16,0.7); /* inkSoft color */
     }
     .bar-value {
       position: absolute;
       top: -25px;
       font-weight: bold;
-      color: var(--color-ink);
+      color: #1A1410;
     }
   `;
 
@@ -361,7 +361,7 @@ export default function Presentation() {
         <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 15 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
           <h2 className="font-display text-6xl mb-6 bg-white/90 p-4 rounded shadow">Conclusion</h2>
           <p className="text-2xl text-inkSoft mb-12 bg-white/90 p-4 rounded shadow text-center max-w-3xl">
-            Penicillin saves lives. Pearls buy survival. Potatoes save the future. Which artifact gives you the greatest leverage to change history?
+            Penicillin saves lives. Pearls buy survival. Potatoes save the future. Which artifact gives you the greatest advantage to survive, acquire immense wealth, and successfully fulfill your "Book Delivery Mission"?
           </p>
           <div className="p-6 bg-white rounded-xl shadow-2xl mb-8 pointer-events-auto">
             <img 
