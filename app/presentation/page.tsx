@@ -240,16 +240,21 @@ export default function Presentation() {
 
         {/* Slide 8: Population Impact */}
         <div className={`absolute inset-0 flex items-center justify-center transition-all duration-1000 ${slide === 8 ? 'opacity-100 scale-100 pointer-events-auto' : slide < 8 ? 'opacity-0 scale-90 pointer-events-none' : 'opacity-0 scale-110 pointer-events-none'}`}>
-          <div className="bg-white shadow-2xl rounded p-12 max-w-4xl w-full text-center relative overflow-hidden">
-             <h2 className="font-display text-5xl mb-6 relative z-10">The Resulting Boom</h2>
-             <p className="text-2xl text-inkSoft leading-relaxed mb-6 relative z-10">
-               Song medicine was empirical and ready to integrate new treatments.
-             </p>
-             <ul className="text-xl text-inkSoft space-y-4 list-disc pl-6 text-left max-w-2xl mx-auto relative z-10">
-               <li>Infections become survivable ailments.</li>
-               <li>Population grows by an additional 20 million within decades.</li>
-               <li>Unprecedented manpower for industry and defense.</li>
-             </ul>
+          <div className="flex bg-white shadow-2xl rounded overflow-hidden max-w-6xl w-full">
+            <div className="w-1/2 p-12 flex flex-col justify-center">
+               <h2 className="font-display text-5xl mb-6 relative z-10">The Resulting Boom</h2>
+               <p className="text-2xl text-inkSoft leading-relaxed mb-6 relative z-10">
+                 Song medicine was empirical and ready to integrate new treatments.
+               </p>
+               <ul className="text-xl text-inkSoft space-y-4 list-disc pl-6 text-left max-w-2xl mx-auto relative z-10">
+                 <li>Infections become survivable ailments.</li>
+                 <li>Population grows by an additional 20 million within decades.</li>
+                 <li>Unprecedented manpower for industry and defense.</li>
+               </ul>
+            </div>
+            <div className="w-1/2 relative min-h-[450px]">
+              <img src="/song_medical_ward.png" alt="Song Medical Ward" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
           </div>
         </div>
 
@@ -295,11 +300,14 @@ export default function Presentation() {
         <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 11 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
           <h2 className="font-display text-5xl mb-12 bg-white/90 p-4 rounded shadow">From Commoner to Millionaire</h2>
           <div className="flex gap-8 max-w-6xl w-full">
-            <div className="w-1/2 bg-white rounded shadow-xl overflow-hidden flex flex-col p-8 justify-center">
+            <div className="w-1/3 bg-white rounded shadow-xl overflow-hidden flex flex-col relative min-h-[300px]">
+              <img src="/song_pearl_merchants.png" className="absolute inset-0 w-full h-full object-cover" alt="Song Pearl Merchants" />
+            </div>
+            <div className="w-1/3 bg-white rounded shadow-xl overflow-hidden flex flex-col p-8 justify-center">
               <h3 className="font-display text-3xl mb-4 text-cinnabar">The Pearl Famine</h3>
               <p className="text-lg">During the Song Dynasty, there was a massive shortage of high-quality pearls. They were reserved for royalty and incredibly expensive. A single large, perfectly spherical pearl could buy an estate.</p>
             </div>
-            <div className="w-1/2 bg-white rounded shadow-xl overflow-hidden flex flex-col justify-center p-8">
+            <div className="w-1/3 bg-white rounded shadow-xl overflow-hidden flex flex-col justify-center p-8">
               <h3 className="font-display text-3xl mb-4">Instant Immense Wealth</h3>
               <ul className="text-xl space-y-4 list-disc pl-6">
                 <li>Your modern artificial pearls are flawless and larger than any natural pearl.</li>
