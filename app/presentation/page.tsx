@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Presentation() {
   const [slide, setSlide] = useState(1);
   const [showTitle, setShowTitle] = useState(false);
-  const totalSlides = 15;
+  const totalSlides = 18;
 
   const nextSlide = () => {
     if (slide === 1 && !showTitle) {
@@ -253,8 +253,29 @@ export default function Presentation() {
           </div>
         </div>
 
-        {/* Slide 9: Artifact 2 - The Pearls */}
-        <div className={`absolute inset-0 flex items-center justify-center transition-transform duration-1000 ${slide === 9 ? 'scale-100 opacity-100 pointer-events-auto' : slide < 9 ? 'scale-90 opacity-0 pointer-events-none' : 'scale-110 opacity-0 pointer-events-none'}`}>
+        
+        {/* Slide 9: The Cost of Penicillin */}
+        <div className={`absolute inset-0 flex items-center justify-center transition-all duration-1000 ${slide === 9 ? 'opacity-100 scale-100 pointer-events-auto' : slide < 9 ? 'opacity-0 scale-90 pointer-events-none' : 'opacity-0 scale-110 pointer-events-none'}`}>
+          <div className="flex bg-white shadow-2xl rounded overflow-hidden max-w-6xl w-full">
+             <div className="w-1/2 relative min-h-[450px]">
+              <img src="/vial_negative.png" alt="Overpopulation" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div className="w-1/2 p-12 flex flex-col justify-center bg-parchment">
+              <h2 className="font-display text-5xl mb-6 text-cinnabar">The Strain of Life</h2>
+              <p className="text-xl text-inkSoft leading-relaxed mb-6">
+                Saving millions creates a new crisis: a massive population boom that outpaces food production and infrastructure.
+              </p>
+              <ul className="text-xl text-inkSoft space-y-4 list-disc pl-6 text-left">
+                <li>Urban centers become dangerously overcrowded.</li>
+                <li>Famine risk increases as mouths to feed multiply.</li>
+                <li>Antibiotic resistance inevitably develops due to misuse.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Slide 10: Artifact 2 - The Pearls */}
+        <div className={`absolute inset-0 flex items-center justify-center transition-transform duration-1000 ${slide === 10 ? 'scale-100 opacity-100 pointer-events-auto' : slide < 10 ? 'scale-90 opacity-0 pointer-events-none' : 'scale-110 opacity-0 pointer-events-none'}`}>
           <div className="flex bg-white shadow-2xl rounded overflow-hidden max-w-5xl w-full">
             <div className="w-1/2 p-12 flex flex-col justify-center">
               <div className="seal text-5xl mb-4 text-ink">珠</div>
@@ -270,8 +291,8 @@ export default function Presentation() {
           </div>
         </div>
 
-        {/* Slide 10: The Value of Pearls */}
-        <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 10 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+        {/* Slide 11: The Value of Pearls */}
+        <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 11 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
           <h2 className="font-display text-5xl mb-12 bg-white/90 p-4 rounded shadow">From Commoner to Millionaire</h2>
           <div className="flex gap-8 max-w-6xl w-full">
             <div className="w-1/2 bg-white rounded shadow-xl overflow-hidden flex flex-col p-8 justify-center">
@@ -289,8 +310,8 @@ export default function Presentation() {
           </div>
         </div>
 
-        {/* Slide 11: Buying Survival */}
-        <div className={`absolute inset-0 flex items-center justify-center transition-all duration-1000 ${slide === 11 ? 'opacity-100 scale-100 pointer-events-auto' : slide < 11 ? 'opacity-0 scale-90 pointer-events-none' : 'opacity-0 scale-110 pointer-events-none'}`}>
+        {/* Slide 12: Buying Survival */}
+        <div className={`absolute inset-0 flex items-center justify-center transition-all duration-1000 ${slide === 12 ? 'opacity-100 scale-100 pointer-events-auto' : slide < 12 ? 'opacity-0 scale-90 pointer-events-none' : 'opacity-0 scale-110 pointer-events-none'}`}>
           <div className="flex bg-white shadow-2xl rounded overflow-hidden max-w-6xl w-full">
             <div className="w-1/2 relative min-h-[450px]">
               <img src="/vivid_song_dynasty_city.png" alt="Song City" className="absolute inset-0 w-full h-full object-cover" />
@@ -307,8 +328,29 @@ export default function Presentation() {
           </div>
         </div>
 
-        {/* Slide 12: Artifact 3 - The Tuber */}
-        <div className={`absolute inset-0 flex items-center justify-center transition-transform duration-1000 ${slide === 12 ? 'scale-100 opacity-100 pointer-events-auto' : slide < 12 ? 'scale-90 opacity-0 pointer-events-none' : 'scale-110 opacity-0 pointer-events-none'}`}>
+        
+        {/* Slide 13: The Danger of Wealth */}
+        <div className={`absolute inset-0 flex items-center justify-center transition-all duration-1000 ${slide === 13 ? 'opacity-100 scale-100 pointer-events-auto' : slide < 13 ? 'opacity-0 scale-90 pointer-events-none' : 'opacity-0 scale-110 pointer-events-none'}`}>
+          <div className="flex bg-white shadow-2xl rounded overflow-hidden max-w-6xl w-full flex-row-reverse">
+             <div className="w-1/2 relative min-h-[450px]">
+              <img src="/pearls_negative.png" alt="Greed and Corruption" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div className="w-1/2 p-12 flex flex-col justify-center bg-parchment">
+              <h2 className="font-display text-5xl mb-6 text-cinnabar">A Target on Your Back</h2>
+              <p className="text-xl text-inkSoft leading-relaxed mb-6">
+                Immense, sudden wealth in a feudal society is a beacon for corruption, theft, and fatal political intrigue.
+              </p>
+              <ul className="text-xl text-inkSoft space-y-4 list-disc pl-6 text-left">
+                <li>Corrupt officials will attempt to seize your assets.</li>
+                <li>Ruthless criminals will target you and your family.</li>
+                <li>Hyperinflation of luxury goods disrupts the local economy.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Slide 14: Artifact 3 - The Tuber */}
+        <div className={`absolute inset-0 flex items-center justify-center transition-transform duration-1000 ${slide === 14 ? 'scale-100 opacity-100 pointer-events-auto' : slide < 14 ? 'scale-90 opacity-0 pointer-events-none' : 'scale-110 opacity-0 pointer-events-none'}`}>
           <div className="flex bg-white shadow-2xl rounded overflow-hidden max-w-5xl w-full">
              <div className="w-1/2 p-12 flex flex-col justify-center">
               <div className="seal text-5xl mb-4 text-ink">薯</div>
@@ -324,8 +366,8 @@ export default function Presentation() {
           </div>
         </div>
 
-        {/* Slide 13: Yield Research */}
-        <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 13 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+        {/* Slide 15: Yield Research */}
+        <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 15 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
           <h2 className="font-display text-5xl mb-12 bg-white/90 p-4 rounded shadow">Caloric Yield Comparison</h2>
           <div className="flex gap-8 max-w-6xl w-full">
             <div className="w-1/2 bg-white rounded shadow-xl overflow-hidden flex flex-col">
@@ -342,8 +384,8 @@ export default function Presentation() {
           </div>
         </div>
 
-        {/* Slide 14: Eradicating Famine */}
-        <div className={`absolute inset-0 flex items-center justify-center transition-all duration-1000 ${slide === 14 ? 'opacity-100 scale-100 pointer-events-auto' : slide < 14 ? 'opacity-0 scale-90 pointer-events-none' : 'opacity-0 scale-110 pointer-events-none'}`}>
+        {/* Slide 16: Eradicating Famine */}
+        <div className={`absolute inset-0 flex items-center justify-center transition-all duration-1000 ${slide === 16 ? 'opacity-100 scale-100 pointer-events-auto' : slide < 16 ? 'opacity-0 scale-90 pointer-events-none' : 'opacity-0 scale-110 pointer-events-none'}`}>
           <div className="flex bg-white shadow-2xl rounded overflow-hidden max-w-6xl w-full">
              <div className="w-1/2 relative min-h-[450px]">
               <img src="/bumper_crop_1779649719878.png" alt="Bumper Crop" className="absolute inset-0 w-full h-full object-cover" />
@@ -360,8 +402,29 @@ export default function Presentation() {
           </div>
         </div>
 
-        {/* Slide 15: Conclusion & Vote */}
-        <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 15 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+        
+        {/* Slide 17: The Blight Threat */}
+        <div className={`absolute inset-0 flex items-center justify-center transition-all duration-1000 ${slide === 17 ? 'opacity-100 scale-100 pointer-events-auto' : slide < 17 ? 'opacity-0 scale-90 pointer-events-none' : 'opacity-0 scale-110 pointer-events-none'}`}>
+          <div className="flex bg-white shadow-2xl rounded overflow-hidden max-w-6xl w-full">
+             <div className="w-1/2 relative min-h-[450px]">
+              <img src="/potato_negative.png" alt="Crop Failure" className="absolute inset-0 w-full h-full object-cover" />
+            </div>
+            <div className="w-1/2 p-12 flex flex-col justify-center bg-parchment">
+              <h2 className="font-display text-5xl mb-6 text-cinnabar">The Monoculture Trap</h2>
+              <p className="text-xl text-inkSoft leading-relaxed mb-6">
+                Relying heavily on a single clone of a new crop leaves the entire food supply vulnerable to devastation.
+              </p>
+              <ul className="text-xl text-inkSoft space-y-4 list-disc pl-6 text-left">
+                <li>A single pathogen (like Late Blight) can wipe out the harvest.</li>
+                <li>Lack of genetic diversity guarantees widespread failure if diseased.</li>
+                <li>Over-reliance creates a catastrophic famine risk for millions.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        {/* Slide 18: Conclusion & Vote */}
+        <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 18 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
           <h2 className="font-display text-6xl mb-6 bg-white/90 p-4 rounded shadow">Conclusion</h2>
           <p className="text-2xl text-inkSoft mb-12 bg-white/90 p-4 rounded shadow text-center max-w-3xl">
             Penicillin saves lives. Pearls buy survival. Potatoes save the future. Which artifact gives you the greatest advantage to survive, acquire immense wealth, and successfully fulfill your "Book Delivery Mission"?
