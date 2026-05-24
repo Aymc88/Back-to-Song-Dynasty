@@ -85,7 +85,7 @@ export default function Presentation() {
       </div>
 
       {/* Slide 3 */}
-      <div className={`absolute inset-0 flex items-center justify-center transition-transform duration-1000 ${slide === 3 ? 'scale-100 opacity-100' : slide < 3 ? 'scale-90 opacity-0' : 'scale-110 opacity-0 pointer-events-none'}`}>
+      <div className={`absolute inset-0 flex items-center justify-center transition-transform duration-1000 ${slide === 3 ? 'scale-100 opacity-100' : slide < 3 ? 'scale-90 opacity-0 pointer-events-none' : 'scale-110 opacity-0 pointer-events-none'}`}>
         <div className="max-w-4xl w-full flex items-center gap-12 px-12 group cursor-default">
           <div className="seal text-[120px] leading-none shrink-0 group-hover:scale-125 transition-transform duration-500 ease-out">霉</div>
           <div>
@@ -105,7 +105,7 @@ export default function Presentation() {
       </div>
 
       {/* Slide 4 */}
-      <div className={`absolute inset-0 flex items-center justify-center transition-transform duration-1000 ${slide === 4 ? 'scale-100 opacity-100' : slide < 4 ? 'scale-90 opacity-0' : 'scale-110 opacity-0 pointer-events-none'}`}>
+      <div className={`absolute inset-0 flex items-center justify-center transition-transform duration-1000 ${slide === 4 ? 'scale-100 opacity-100' : slide < 4 ? 'scale-90 opacity-0 pointer-events-none' : 'scale-110 opacity-0 pointer-events-none'}`}>
         <div className="max-w-4xl w-full flex items-center gap-12 px-12 group cursor-default">
           <div className="seal text-[120px] leading-none shrink-0 group-hover:scale-125 transition-transform duration-500 ease-out">火</div>
           <div>
@@ -125,7 +125,7 @@ export default function Presentation() {
       </div>
 
       {/* Slide 5 */}
-      <div className={`absolute inset-0 flex items-center justify-center transition-transform duration-1000 ${slide === 5 ? 'scale-100 opacity-100' : slide < 5 ? 'scale-90 opacity-0' : 'scale-110 opacity-0 pointer-events-none'}`}>
+      <div className={`absolute inset-0 flex items-center justify-center transition-transform duration-1000 ${slide === 5 ? 'scale-100 opacity-100' : slide < 5 ? 'scale-90 opacity-0 pointer-events-none' : 'scale-110 opacity-0 pointer-events-none'}`}>
         <div className="max-w-4xl w-full flex items-center gap-12 px-12 group cursor-default">
           <div className="seal text-[120px] leading-none shrink-0 group-hover:scale-125 transition-transform duration-500 ease-out">薯</div>
           <div>
