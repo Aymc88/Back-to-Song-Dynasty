@@ -73,7 +73,7 @@ export default function Presentation() {
     }
     .bar-label {
       position: absolute;
-      bottom: -50px;
+      bottom: -45px;
       width: 120px;
       text-align: center;
       font-weight: 500;
@@ -216,21 +216,21 @@ export default function Presentation() {
               <div className="bar-group">
                 <div className="bar cinnabar" style={{ height: slide === 7 ? '90%' : '0%' }}>
                   <span className="bar-value">~60%</span>
-                  <span className="bar-label">Battlefield (Before)</span>
+                  <span className="bar-label">Battlefield<br/>(Before)</span>
                 </div>
                 <div className="bar" style={{ height: slide === 7 ? '20%' : '0%' }}>
                   <span className="bar-value">~20%</span>
-                  <span className="bar-label">Battlefield (After)</span>
+                  <span className="bar-label">Battlefield<br/>(After)</span>
                 </div>
               </div>
               <div className="bar-group">
                 <div className="bar cinnabar" style={{ height: slide === 7 ? '45%' : '0%' }}>
                   <span className="bar-value">~45%</span>
-                  <span className="bar-label">Infant (Before)</span>
+                  <span className="bar-label">Infant<br/>(Before)</span>
                 </div>
                 <div className="bar" style={{ height: slide === 7 ? '15%' : '0%' }}>
                   <span className="bar-value">~15%</span>
-                  <span className="bar-label">Infant (After)</span>
+                  <span className="bar-label">Infant<br/>(After)</span>
                 </div>
               </div>
             </div>
