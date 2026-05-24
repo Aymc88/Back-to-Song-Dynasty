@@ -101,7 +101,7 @@ export default function Presentation() {
       {/* Background images for specific slides */}
       <div className="absolute inset-0 z-0 pointer-events-none opacity-20 transition-opacity duration-1000">
         <img src="/song_cityscape_1779649626968.png" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${slide === 1 ? 'opacity-100' : 'opacity-0'}`} alt="" />
-        <img src="/rainbow-bridge.jpg" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${slide === 2 ? 'opacity-100' : 'opacity-0'}`} alt="" />
+        <img src="/vivid_song_dynasty_city.png" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${slide === 2 ? 'opacity-100' : 'opacity-0'}`} alt="" />
         <img src="/jurchen_cavalry_1779649569638.png" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${slide === 3 ? 'opacity-100' : 'opacity-0'}`} alt="" />
         <img src="/amber_room_1779649582249.png" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ${slide === 4 ? 'opacity-100' : 'opacity-0'}`} alt="" />
       </div>
@@ -173,15 +173,15 @@ export default function Presentation() {
         <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 5 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
           <h2 className="font-display text-4xl mb-16 text-center uppercase tracking-widest">The Three Artifacts</h2>
           <div className="flex gap-12 text-center pointer-events-auto">
-            <div className="hover:scale-110 transition-transform duration-500 ease-out bg-white p-6 rounded shadow-lg">
+            <div className="hover:scale-110 transition-transform duration-500 ease-out bg-white p-6 rounded shadow-lg relative z-50 cursor-pointer">
               <div className="seal text-6xl mb-6 mx-auto">霉</div>
               <h3 className="font-display text-2xl">The Vial</h3>
             </div>
-            <div className="hover:scale-110 transition-transform duration-500 ease-out bg-white p-6 rounded shadow-lg">
-              <div className="seal text-6xl mb-6 mx-auto">火</div>
-              <h3 className="font-display text-2xl">The Manual</h3>
+            <div className="hover:scale-110 transition-transform duration-500 ease-out bg-white p-6 rounded shadow-lg relative z-50 cursor-pointer">
+              <div className="seal text-6xl mb-6 mx-auto">珠</div>
+              <h3 className="font-display text-2xl">The Pearls</h3>
             </div>
-            <div className="hover:scale-110 transition-transform duration-500 ease-out bg-white p-6 rounded shadow-lg">
+            <div className="hover:scale-110 transition-transform duration-500 ease-out bg-white p-6 rounded shadow-lg relative z-50 cursor-pointer">
               <div className="seal text-6xl mb-6 mx-auto">薯</div>
               <h3 className="font-display text-2xl">The Tuber</h3>
             </div>
@@ -250,59 +250,55 @@ export default function Presentation() {
           </div>
         </div>
 
-        {/* Slide 9: Artifact 2 - The Manual */}
+        {/* Slide 9: Artifact 2 - The Pearls */}
         <div className={`absolute inset-0 flex items-center justify-center transition-transform duration-1000 ${slide === 9 ? 'scale-100 opacity-100 pointer-events-auto' : slide < 9 ? 'scale-90 opacity-0 pointer-events-none' : 'scale-110 opacity-0 pointer-events-none'}`}>
           <div className="flex bg-white shadow-2xl rounded overflow-hidden max-w-5xl w-full">
             <div className="w-1/2 p-12 flex flex-col justify-center">
-              <div className="seal text-5xl mb-4 text-ink">火</div>
-              <h2 className="font-display text-5xl mb-2">The Manual</h2>
-              <div className="text-xl italic text-cinnabar mb-8">火药 · The Powder</div>
+              <div className="seal text-5xl mb-4 text-ink">珠</div>
+              <h2 className="font-display text-5xl mb-2">The Pearls</h2>
+              <div className="text-xl italic text-cinnabar mb-8">珍珠 · The Pearl</div>
               <p className="text-2xl text-inkSoft leading-relaxed">
-                A waterproof booklet with the optimal black-powder ratio (75% saltpeter, 15% charcoal, 10% sulfur) and matchlock musket schematics.
+                A burlap sack overflowing with large, perfectly spherical, luminous artificial pearls from the future.
               </p>
             </div>
             <div className="w-1/2 relative min-h-[400px]">
-              <img src="/waterproof_manual_1779649640725.png" alt="Waterproof Manual" className="absolute inset-0 w-full h-full object-cover" />
+              <img src="/bag_of_pearls.png" alt="Bag of Pearls" className="absolute inset-0 w-full h-full object-cover" />
             </div>
           </div>
         </div>
 
-        {/* Slide 10: Existing Tech vs Matchlock */}
+        {/* Slide 10: The Value of Pearls */}
         <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 10 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
-          <h2 className="font-display text-5xl mb-12 bg-white/90 p-4 rounded shadow">From Fire Lances to Muskets</h2>
+          <h2 className="font-display text-5xl mb-12 bg-white/90 p-4 rounded shadow">From Commoner to Millionaire</h2>
           <div className="flex gap-8 max-w-6xl w-full">
-            <div className="w-1/2 bg-white rounded shadow-xl overflow-hidden flex flex-col">
-              <img src="/fire_lance_1779649655511.png" className="h-64 object-cover" alt="Fire Lance" />
-              <div className="p-6">
-                <h3 className="font-display text-2xl mb-2 text-cinnabar">Song Fire Lance</h3>
-                <p className="text-lg">Inaccurate, short-range, prone to misfires. Used primarily for shock and awe rather than lethal piercing power.</p>
-              </div>
+            <div className="w-1/2 bg-white rounded shadow-xl overflow-hidden flex flex-col p-8 justify-center">
+              <h3 className="font-display text-3xl mb-4 text-cinnabar">The Pearl Famine</h3>
+              <p className="text-lg">During the Song Dynasty, there was a massive shortage of high-quality pearls. They were reserved for royalty and incredibly expensive. A single large, perfectly spherical pearl could buy an estate.</p>
             </div>
             <div className="w-1/2 bg-white rounded shadow-xl overflow-hidden flex flex-col justify-center p-8">
-              <h3 className="font-display text-3xl mb-4">The Matchlock Upgrade</h3>
+              <h3 className="font-display text-3xl mb-4">Instant Immense Wealth</h3>
               <ul className="text-xl space-y-4 list-disc pl-6">
-                <li>Perfected powder ratio maximizes explosive force.</li>
-                <li>Metal barrel and triggering mechanism.</li>
-                <li>Lethal armor-piercing capability at distance.</li>
-                <li>Can be mass-produced with Song bronze-casting tech.</li>
+                <li>Your modern artificial pearls are flawless and larger than any natural pearl.</li>
+                <li>You immediately become one of the wealthiest merchants in Bianjing.</li>
+                <li>Access to the highest echelons of Song society and court officials.</li>
               </ul>
             </div>
           </div>
         </div>
 
-        {/* Slide 11: Siege Defense */}
+        {/* Slide 11: Buying Survival */}
         <div className={`absolute inset-0 flex items-center justify-center transition-all duration-1000 ${slide === 11 ? 'opacity-100 scale-100 pointer-events-auto' : slide < 11 ? 'opacity-0 scale-90 pointer-events-none' : 'opacity-0 scale-110 pointer-events-none'}`}>
           <div className="flex bg-white shadow-2xl rounded overflow-hidden max-w-6xl w-full">
             <div className="w-1/2 relative min-h-[450px]">
-              <img src="/siege_defense_1779649678883.png" alt="Siege Defense" className="absolute inset-0 w-full h-full object-cover" />
+              <img src="/vivid_song_dynasty_city.png" alt="Song City" className="absolute inset-0 w-full h-full object-cover" />
             </div>
             <div className="w-1/2 p-12 flex flex-col justify-center">
-              <h2 className="font-display text-5xl mb-6 text-cinnabar">Repelling the Jin</h2>
+              <h2 className="font-display text-5xl mb-6 text-cinnabar">Buying Survival</h2>
               <p className="text-xl text-inkSoft leading-relaxed mb-6">
-                When the Jurchen cavalry arrives in 1127, they face disciplined ranks of musketeers on the walls of Bianjing.
+                When the Jin invasion begins, wealth is your only shield. If you fail to prepare, you will perish in the sack of the capital.
               </p>
               <p className="text-xl text-inkSoft leading-relaxed font-bold">
-                The invasion breaks. The Northern Song survives. The trajectory of global warfare is accelerated by 400 years.
+                With your limitless funds, you can hire a private mercenary army, bribe officials for safe passage south, or even fund the Song military defense yourself.
               </p>
             </div>
           </div>
@@ -365,7 +361,7 @@ export default function Presentation() {
         <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 15 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
           <h2 className="font-display text-6xl mb-6 bg-white/90 p-4 rounded shadow">Conclusion</h2>
           <p className="text-2xl text-inkSoft mb-12 bg-white/90 p-4 rounded shadow text-center max-w-3xl">
-            Penicillin saves lives. Muskets save the empire. Potatoes save the future. Which artifact gives you the greatest leverage to change history?
+            Penicillin saves lives. Pearls buy survival. Potatoes save the future. Which artifact gives you the greatest leverage to change history?
           </p>
           <div className="p-6 bg-white rounded-xl shadow-2xl mb-8 pointer-events-auto">
             <img 
