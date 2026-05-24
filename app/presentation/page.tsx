@@ -44,15 +44,16 @@ export default function Presentation() {
       height: 300px;
       display: flex;
       align-items: flex-end;
-      gap: 2rem;
+      gap: 4rem;
       padding-top: 2rem;
       border-bottom: 2px solid rgba(26,20,16,0.2);
       border-left: 2px solid rgba(26,20,16,0.2);
       position: relative;
+      margin-bottom: 2rem; /* make room for labels below axis */
     }
     .bar-group {
       display: flex;
-      gap: 1rem;
+      gap: 4rem;
       align-items: flex-end;
       height: 100%;
       flex: 1;
@@ -72,9 +73,11 @@ export default function Presentation() {
     }
     .bar-label {
       position: absolute;
-      bottom: -30px;
-      white-space: nowrap;
+      bottom: -50px;
+      width: 120px;
+      text-align: center;
       font-weight: 500;
+      line-height: 1.2;
       color: rgba(26,20,16,0.7); /* inkSoft color */
     }
     .bar-value {
