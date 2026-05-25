@@ -38,7 +38,7 @@ function Header() {
           <span className="seal group-hover:rotate-0 transition-transform duration-300">宋</span>
           <span className="font-display text-xl text-ink leading-tight">
             <span className="block">Back to the Song Dynasty</span>
-            <span className="block text-xs text-muted/70">Amanda Chen</span>
+            <span className="block text-base text-muted/70">Amanda Chen</span>
             <span className="block text-xs text-muted italic">
               A World History thought experiment
             </span>

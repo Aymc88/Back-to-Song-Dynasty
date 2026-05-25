@@ -9,7 +9,7 @@ export default function Home() {
           <div className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-muted mb-8">
             <span className="h-px w-12 bg-muted/60" />
             <span className="flex flex-col items-center gap-1">
-              <span className="text-[10px] tracking-[0.3em] text-muted/60">Amanda Chen</span>
+              <span className="text-sm tracking-[0.3em] text-muted/60">Amanda Chen</span>
               <span>A World History Thought Experiment</span>
             </span>
             <span className="h-px w-12 bg-muted/60" />

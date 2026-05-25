@@ -449,7 +449,7 @@ export default function Presentation() {
       </div>
 
       {/* Navigation Controls Overlay */}
-      <div className="absolute bottom-6 left-6 text-xs text-muted/60 z-30 font-serif italic select-none">
+      <div className="absolute bottom-6 left-6 text-5xl text-muted/60 z-30 font-serif italic select-none">
         Amanda Chen
       </div>
       <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-4 z-20" onClick={(e) => e.stopPropagation()}>
