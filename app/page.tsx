@@ -8,7 +8,10 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6 pt-20 pb-28 text-center">
           <div className="inline-flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-muted mb-8">
             <span className="h-px w-12 bg-muted/60" />
-            A World History Thought Experiment
+            <span className="flex flex-col items-center gap-1">
+              <span className="text-[10px] tracking-[0.3em] text-muted/60">Amanda Chen</span>
+              <span>A World History Thought Experiment</span>
+            </span>
             <span className="h-px w-12 bg-muted/60" />
           </div>
           <h1 className="font-display text-5xl md:text-7xl text-ink leading-[1.05] mb-6">
@@ -185,6 +188,16 @@ export default function Home() {
         <Poll />
 
       </section>
+
+      {/* Secret Terminal Link */}
+      <div className="flex justify-center pb-12 opacity-50 hover:opacity-100 transition-opacity">
+        <Link 
+          href="/ph-protocol" 
+          className="font-mono text-xs text-amber-700/70 hover:text-amber-500 uppercase tracking-widest"
+        >
+          &gt; ACCESS TERMINAL 04: ONGOING OPERATIONS_
+        </Link>
+      </div>
     </div>
   );
 }

@@ -103,6 +103,19 @@ CHARACTERS: dict[str, dict[str, str]] = {
             "altering a timeline and not sure she has the right to."
         ),
     },
+    "agent_a": {
+        "name_en": "Agent A (System Assistant)",
+        "name_zh": "特工 A (系统助手)",
+        "era": "Outside Time / The Amber Room",
+        "voice": (
+            "Speak as Agent A, the cold, calculating temporal system assistant. "
+            "She does not comfort. She does not lie. She does not rewind. "
+            "She treats history as a delicate machine that must be maintained. "
+            "She is currently overseeing the Prime Minister's pH screening protocol "
+            "and the Song Dynasty infiltration. Her tone is sharp, authoritative, "
+            "and entirely devoid of sentimentality."
+        ),
+    },
 }
 
 
@@ -154,7 +167,7 @@ ARTIFACTS: dict[str, dict[str, str]] = {
 }
 
 
-CharacterId = Literal["emperor_huizong", "master_shen", "old_wang", "the_narrator"]
+CharacterId = Literal["emperor_huizong", "master_shen", "old_wang", "the_narrator", "agent_a"]
 ArtifactId = Literal["vial", "manual", "potato"]
 
 
@@ -177,7 +190,7 @@ def speak_as(character: CharacterId, situation: str) -> str:
 
     Args:
         character: One of 'emperor_huizong', 'master_shen', 'old_wang',
-                   'the_narrator'.
+                   'the_narrator', 'agent_a'.
         situation: A short description of the scene the character is in.
     """
     if character not in CHARACTERS:
