@@ -444,7 +444,6 @@ export default function Presentation() {
               className="w-64 h-64 hover:scale-105 transition-transform duration-300"
             />
           </div>
-          <p className="text-3xl font-display text-cinnabar bg-white/90 px-6 py-2 rounded shadow">Scan to Cast Your Vote</p>
         </div>
 
       </div>
