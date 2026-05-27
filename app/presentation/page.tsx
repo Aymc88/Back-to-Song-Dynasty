@@ -437,17 +437,17 @@ export default function Presentation() {
           <p className="text-xl text-inkSoft mb-6 bg-white/90 p-3 rounded shadow text-center max-w-3xl">
             Penicillin saves lives. Pearls buy survival. Potatoes save the future. Which artifact gives you the greatest advantage to survive, acquire immense wealth, and successfully fulfill your mission?
           </p>
-          <div className="flex gap-8 items-start max-w-5xl w-full px-4">
-            <div className="p-4 bg-white rounded-xl shadow-2xl pointer-events-auto shrink-0">
+          <div className="flex gap-4 items-start max-w-5xl w-full px-4">
+            <div className="p-3 bg-white rounded-xl shadow-2xl pointer-events-auto shrink-0">
               <img
                 src="/qr-code-s.png"
                 alt="QR Code to Vote"
-                className="w-48 h-48 hover:scale-105 transition-transform duration-300"
+                className="w-40 h-40 hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="bg-white/90 p-4 rounded-xl shadow-2xl overflow-y-auto max-h-[320px] flex-1 text-xs leading-relaxed">
-              <p className="font-bold text-sm mb-2 text-cinnabar">Sources & Further Reading</p>
-              <ol className="list-decimal pl-4 space-y-1 text-inkSoft">
+            <div className="bg-white/90 p-3 rounded-xl shadow-2xl flex-1 text-[10px] leading-snug">
+              <p className="font-bold text-xs mb-1.5 text-cinnabar">Sources</p>
+              <ol className="list-decimal pl-3 space-y-0.5 text-inkSoft">
                 <li><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3353407/centuries-ahead-wall-street-how-chinas-song-dynasty-pioneered-global-fiat-currency" target="_blank" rel="noopener noreferrer" className="hover:text-cinnabar underline decoration-dotted">SCMP: Song dynasty fiat currency</a></li>
                 <li><a href="http://www.xinhuanet.com/english/2018-05/11/c_137172448.htm" target="_blank" rel="noopener noreferrer" className="hover:text-cinnabar underline decoration-dotted">Xinhua: Earliest banknote carving</a></li>
                 <li><a href="https://www.guinnessworldrecords.cn/world-records/first-paper-money" target="_blank" rel="noopener noreferrer" className="hover:text-cinnabar underline decoration-dotted">Guinness: First paper money</a></li>
