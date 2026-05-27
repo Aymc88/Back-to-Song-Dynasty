@@ -433,16 +433,39 @@ export default function Presentation() {
 
         {/* Slide 18: Conclusion & Vote */}
         <div className={`absolute inset-0 flex flex-col items-center justify-center transition-opacity duration-1000 ${slide === 18 ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
-          <h2 className="font-display text-6xl mb-6 bg-white/90 p-4 rounded shadow">Conclusion</h2>
-          <p className="text-2xl text-inkSoft mb-12 bg-white/90 p-4 rounded shadow text-center max-w-3xl">
+          <h2 className="font-display text-5xl mb-4 bg-white/90 p-3 rounded shadow">Conclusion</h2>
+          <p className="text-xl text-inkSoft mb-6 bg-white/90 p-3 rounded shadow text-center max-w-3xl">
             Penicillin saves lives. Pearls buy survival. Potatoes save the future. Which artifact gives you the greatest advantage to survive, acquire immense wealth, and successfully fulfill your mission?
           </p>
-          <div className="p-6 bg-white rounded-xl shadow-2xl mb-8 pointer-events-auto">
-            <img 
-              src="/qr-code-s.png" 
-              alt="QR Code to Vote" 
-              className="w-64 h-64 hover:scale-105 transition-transform duration-300"
-            />
+          <div className="flex gap-8 items-start max-w-5xl w-full px-4">
+            <div className="p-4 bg-white rounded-xl shadow-2xl pointer-events-auto shrink-0">
+              <img
+                src="/qr-code-s.png"
+                alt="QR Code to Vote"
+                className="w-48 h-48 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="bg-white/90 p-4 rounded-xl shadow-2xl overflow-y-auto max-h-[320px] flex-1 text-xs leading-relaxed">
+              <p className="font-bold text-sm mb-2 text-cinnabar">Sources & Further Reading</p>
+              <ol className="list-decimal pl-4 space-y-1 text-inkSoft">
+                <li><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3353407/centuries-ahead-wall-street-how-chinas-song-dynasty-pioneered-global-fiat-currency" target="_blank" rel="noopener noreferrer" className="hover:text-cinnabar underline decoration-dotted">SCMP: Song dynasty fiat currency</a></li>
+                <li><a href="http://www.xinhuanet.com/english/2018-05/11/c_137172448.htm" target="_blank" rel="noopener noreferrer" className="hover:text-cinnabar underline decoration-dotted">Xinhua: Earliest banknote carving</a></li>
+                <li><a href="https://www.guinnessworldrecords.cn/world-records/first-paper-money" target="_blank" rel="noopener noreferrer" className="hover:text-cinnabar underline decoration-dotted">Guinness: First paper money</a></li>
+                <li><a href="https://www.nytimes.com/2005/05/22/opinion/china-the-worlds-capital.html" target="_blank" rel="noopener noreferrer" className="hover:text-cinnabar underline decoration-dotted">NYT: Kaifeng, world's capital in 1000</a></li>
+                <li><a href="https://books.google.com.sg/books?id=cdYWzwEACAAJ" target="_blank" rel="noopener noreferrer" className="hover:text-cinnabar underline decoration-dotted">Cambridge History of China Vol 5 Pt 1 (Google Books)</a></li>
+                <li><a href="https://books.google.com/books?id=oYjOvQEACAAJ" target="_blank" rel="noopener noreferrer" className="hover:text-cinnabar underline decoration-dotted">Cambridge History of China Vol 5 Pt 2 (Google Books)</a></li>
+                <li><a href="https://dash.harvard.edu/server/api/core/bitstreams/7312037c-ab46-6bd4-e053-0100007fdf3b/content" target="_blank" rel="noopener noreferrer" className="hover:text-cinnabar underline decoration-dotted">Harvard: Antibiotics & mortality decline</a></li>
+                <li><a href="https://bio.libretexts.org/Courses/Prince_Georges_Community_College/PGCC_Microbiology/12:_Antimicrobial_Drugs/12.01:_Overview_of_Antimicrobial_Therapy/12.1A:_Origins_of_Antimicrobial_Drugs" target="_blank" rel="noopener noreferrer" className="hover:text-cinnabar underline decoration-dotted">Bio LibreTexts: Pre-antibiotic mortality</a></li>
+                <li><a href="https://info.newsgd.com/node_8ac5858e3d/b66d4f7548.shtml" target="_blank" rel="noopener noreferrer" className="hover:text-cinnabar underline decoration-dotted">NewsGD: Nanhai One shipwreck</a></li>
+                <li><a href="https://www.encyclopedia.com/history/news-wires-white-papers-and-books/clothing-and-social-status" target="_blank" rel="noopener noreferrer" className="hover:text-cinnabar underline decoration-dotted">Encyclopedia.com: Song sumptuary laws</a></li>
+                <li><a href="https://www.semanticscholar.org/paper/Ming-China-and-the-emerging-world-economy%2C-c.-Atwell/52a84e8a746dcb1aba965bc3abcfd80b6f2c08c8" target="_blank" rel="noopener noreferrer" className="hover:text-cinnabar underline decoration-dotted">Atwell: Ming China & the world economy (silver)</a></li>
+                <li><a href="https://m.thepaper.cn/baijiahao_17263359" target="_blank" rel="noopener noreferrer" className="hover:text-cinnabar underline decoration-dotted">The Paper: New World crops & Qing population</a></li>
+                <li><a href="http://www.fuchsiadunlop.com/the-joy-of-potatoes/" target="_blank" rel="noopener noreferrer" className="hover:text-cinnabar underline decoration-dotted">Fuchsia Dunlop: Potatoes in China</a></li>
+                <li><a href="https://www.britannica.com/story/the-mold-that-wrecked-ireland" target="_blank" rel="noopener noreferrer" className="hover:text-cinnabar underline decoration-dotted">Britannica: Irish Potato Famine</a></li>
+                <li><a href="https://www.ipl.org/essay/1493-Uncovering-The-Columbian-Exchange-Summary-0225514A69AF6738" target="_blank" rel="noopener noreferrer" className="hover:text-cinnabar underline decoration-dotted">IPL: Columbian Exchange summary</a></li>
+                <li><a href="https://finance.sina.com.cn/jjxw/2022-11-14/doc-imqmmthc4454540.shtml" target="_blank" rel="noopener noreferrer" className="hover:text-cinnabar underline decoration-dotted">Li Xinsheng: Refuting New World crop determinism</a></li>
+              </ol>
+            </div>
           </div>
         </div>
 
