@@ -445,7 +445,7 @@ export default function Presentation() {
                 className="w-40 h-40 hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="bg-white/90 p-3 rounded-xl shadow-2xl flex-1 text-[10px] leading-snug">
+            <div className="bg-white/90 p-3 rounded-xl shadow-2xl max-w-xs text-[10px] leading-snug">
               <p className="font-bold text-xs mb-1.5 text-cinnabar">Sources</p>
               <ol className="list-decimal pl-3 space-y-0.5 text-inkSoft">
                 <li><a href="https://www.scmp.com/news/hong-kong/law-and-crime/article/3353407/centuries-ahead-wall-street-how-chinas-song-dynasty-pioneered-global-fiat-currency" target="_blank" rel="noopener noreferrer" className="hover:text-cinnabar underline decoration-dotted">SCMP: Song dynasty fiat currency</a></li>
