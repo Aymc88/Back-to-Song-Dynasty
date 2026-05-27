@@ -437,7 +437,7 @@ export default function Presentation() {
           <p className="text-xl text-inkSoft mb-6 bg-white/90 p-3 rounded shadow text-center max-w-3xl">
             Penicillin saves lives. Pearls buy survival. Potatoes save the future. Which artifact gives you the greatest advantage to survive, acquire immense wealth, and successfully fulfill your mission?
           </p>
-          <div className="flex gap-4 items-start max-w-5xl w-full px-4">
+          <div className="flex gap-4 items-start justify-center w-full px-4">
             <div className="p-3 bg-white rounded-xl shadow-2xl pointer-events-auto shrink-0">
               <img
                 src="/qr-code-s.png"
